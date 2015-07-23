@@ -1,0 +1,34 @@
+.bg {
+position: absolute;
+top: 0; bottom: 0; right: 0; left: 0;
+background-position: center;
+background-size: 100% auto;
+background-repeat: no-repeat;
+opacity: 0;
+transition: opacity 2s;
+}
+
+#bg1 {
+	background-image: url(bg-blue.png);
+
+}
+
+#bg2 {
+	background-image: url(bg-orange.png);
+
+}
+#bg3 {
+	background-image: url(bg-brown.png);
+
+}
+
+.bg.active {
+	opacity: 1;
+}
+
+@media screen and (max-width: 500px) {
+	.bg { opacity: 1; }
+	#bg1 { top: 0%;}
+	#bg2 { top: 33%;}
+	#bg3 { top: 66%;}
+}

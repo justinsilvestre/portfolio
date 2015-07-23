@@ -1,0 +1,784 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"backgr",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/justin/code/JS/node/express/app.js",
+			"settings":
+			{
+				"buffer_size": 1530,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/SASS Build/SASS - Compressed.sublime-build",
+					""
+				],
+				[
+					"Packages/SASS Build/SASS.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/SASS Build/SASS - Compressed.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 138.0,
+		"last_filter": "package inst",
+		"selected_items":
+		[
+			[
+				"package inst",
+				"Package Control: Install Package"
+			],
+			[
+				"package remove p",
+				"Package Control: Remove Package"
+			],
+			[
+				"packa ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/media/justin/C0B27350B2734A44/Users/JS/Desktop/portfolio"
+	],
+	"file_history":
+	[
+		"/media/justin/C0B27350B2734A44/Users/JS/Desktop/RegimenMD/regimen_practice_signup.html",
+		"/home/justin/code/SG/original/machii/mach-ii.cfc",
+		"/home/justin/code/SG/original/machii/mach-ii.cfm",
+		"/home/justin/Desktop/CustomCRMListener.txt",
+		"/home/justin/code/JS/express/tweets.ejs",
+		"/home/justin/code/JS/express/passport.js",
+		"/home/justin/code/JS/express/auth.js",
+		"/home/justin/code/JS/node/modules.js",
+		"/home/justin/Desktop/cathats.rb",
+		"/home/justin/Desktop/viewCustomNavigationHorizontalDropdown.txt",
+		"/home/justin/code/SG/agile/agiledevregimenmd/view/block/viewCustomMemberRedirectSales1.cfm",
+		"/home/justin/code/SG/agile/agiledevregimenmd/controller/listener/CustomWishListListener.cfc",
+		"/home/justin/code/SG/agile/agiledevregimenmd/view/block/viewCustomLoginDiv.cfm",
+		"/home/justin/code/SG/agile/agiledevregimenmd/view/block/viewCustomMemberRedirectDoctor.cfm",
+		"/home/justin/code/SG/agile/agiledevregimenmd/controller/listener/CustomListener.cfc",
+		"/home/justin/code/SG/agile/agiledevregimenmd/controller/listener/CustomCRMListener.cfc",
+		"/home/justin/code/SG/agile/agiledevregimenmd/view/block/viewCustomNavigationHorizontalDropdown.cfm",
+		"/home/justin/code/JanCarritt/home/foundation/custom.scss",
+		"/home/justin/code/JanCarritt/custom.scss",
+		"/media/justin/C0B27350B2734A44/Users/JS/Desktop/RegimenMD/regimen_practice_signup_fixed.html",
+		"/media/justin/C0B27350B2734A44/Users/JS/Desktop/RegimenMD/regimen_contact_numberin.html",
+		"/home/justin/code/JS/todo_app/base.css",
+		"/home/justin/code/JS/todo_app/views/app.js",
+		"/home/justin/code/JS/todo_app/views/todos.js",
+		"/home/justin/code/JS/todo_app/models/todo.js",
+		"/home/justin/code/JS/todo_app/collections/todos.js",
+		"/home/justin/code/JS/todo_app/localstorage.js",
+		"/home/justin/code/JanCarritt/foundation.css",
+		"/home/justin/code/node/expresschat/script.js",
+		"/home/justin/code/node/expresschat/index.html",
+		"/home/justin/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/justin/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/justin/code/node/expresschat/views/home.jade",
+		"/home/justin/code/node/expresschat/home.jade",
+		"/home/justin/code/node/expresschat/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/examples/fileapi/public/app.js",
+		"/home/justin/code/node/nodetest1/routes/index.js",
+		"/home/justin/code/node/nodetest1/views/index.jade",
+		"/home/justin/code/node/nodetest1/views/helloworld.jade",
+		"/home/justin/code/node/nodetest1/views/userlist.jade",
+		"/home/justin/code/odin/flightbooker/app/views/layouts/application.html.erb",
+		"/home/justin/code/odin/depot/app/mailers/order_notifier.rb",
+		"/home/justin/code/odin/depot/app/views/line_items/_line_item.html.erb",
+		"/home/justin/code/odin/depot/app/views/order_notifier/received.html.erb",
+		"/home/justin/code/odin/depot/app/views/order_notifier/shipped.html.erb",
+		"/home/justin/code/odin/depot/test/fixtures/products.yml",
+		"/home/justin/code/odin/depot/app/views/orders/_form.html.erb",
+		"/home/justin/code/odin/depot/app/models/order.rb",
+		"/home/justin/code/odin/depot/test/controllers/carts_controller_test.rb",
+		"/home/justin/code/odin/depot/config/environments/development.rb",
+		"/home/justin/code/odin/depot/app/models/line_item.rb",
+		"/home/justin/code/odin/depot/app/controllers/orders_controller.rb",
+		"/home/justin/code/odin/depot/config/environments/test.rb",
+		"/home/justin/code/odin/depot/app/views/order_notifier/received.text.erb",
+		"/home/justin/code/odin/depot/app/views/line_items/_line_item.text.erb",
+		"/home/justin/code/odin/depot/app/models/product.rb",
+		"/home/justin/code/odin/depot/app/controllers/products_controller.rb",
+		"/home/justin/code/odin/depot/config/routes.rb",
+		"/home/justin/code/odin/depot/app/controllers/line_items_controller.rb",
+		"/home/justin/code/odin/depot/app/views/products/who_bought.atom.builder",
+		"/home/justin/code/odin/depot/app/views/line_items/destroy.js.erb",
+		"/home/justin/code/odin/depot/app/views/line_items/create.js.erb",
+		"/home/justin/code/odin/depot/app/controllers/carts_controller.rb",
+		"/home/justin/code/odin/depot/app/views/carts/show.html.erb",
+		"/home/justin/code/odin/depot/test/controllers/orders_controller_test.rb",
+		"/home/justin/code/odin/depot/test/fixtures/line_items.yml",
+		"/home/justin/code/odin/depot/test/fixtures/orders.yml",
+		"/home/justin/code/odin/depot/db/seeds.rb",
+		"/home/justin/code/odin/depot/db/migrate/20150403151553_add_order_to_line_itetem.rb",
+		"/home/justin/code/odin/depot/test/models/order_test.rb",
+		"/home/justin/code/odin/depot/app/views/carts/_cart.html.erb",
+		"/home/justin/code/odin/depot/db/migrate/20150309064434_create_orders.rb",
+		"/home/justin/code/odin/depot/app/controllers/concerns/current_cart.rb",
+		"/home/justin/code/odin/depot/app/views/orders/index.html.erb",
+		"/home/justin/code/odin/depot/app/views/orders/index.json.jbuilder",
+		"/home/justin/code/odin/depot/app/views/orders/show.html.erb",
+		"/home/justin/code/odin/depot/app/views/orders/show.json.jbuilder",
+		"/home/justin/code/odin/depot/db/development.sqlite3",
+		"/home/justin/code/odin/depot/db/schema.rb",
+		"/home/justin/code/odin/depot/db/test.sqlite3",
+		"/home/justin/code/odin/depot/log/development.log",
+		"/home/justin/code/odin/depot/log/test.log",
+		"/home/justin/code/odin/depot/app/views/carts/destroy.js.erb",
+		"/home/justin/code/odin/depot/test/controllers/store_controller_test.rb",
+		"/home/justin/code/odin/depot/test/controllers/line_items_controller_test.rb",
+		"/home/justin/code/odin/depot/app/views/carts/destroy.js"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"req",
+			"node",
+			"pipe",
+			"server",
+			"http",
+			"event",
+			"events",
+			"Event",
+			"events",
+			"todo-list",
+			"el` propert",
+			"this.remov",
+			"vanish",
+			"line-through",
+			"`$el`",
+			"`el`",
+			"tagname",
+			"view.ex",
+			"initialize",
+			"taskview",
+			"sales",
+			"sales1",
+			"sales",
+			"member",
+			"type",
+			"testdata",
+			"reset",
+			"nextplace",
+			"nextpl",
+			"filter",
+			"rendertask",
+			"filter",
+			"toggle",
+			"trigger",
+			"filter",
+			"taskview",
+			"filter",
+			"destroy",
+			"initiali",
+			"listView",
+			"todoList",
+			"TodoList",
+			"pending",
+			"trackev",
+			"everything",
+			"contact-right",
+			"phone-numb",
+			"phone",
+			"phone-number",
+			"attr",
+			"render",
+			"add",
+			"events",
+			"src=\"//edge.e-sacredgrounds.com/clientData/caltaxidermy.com/img/sponsors/",
+			".destr",
+			".destroy",
+			"clear",
+			"addclass",
+			"label",
+			"visible",
+			"destroy",
+			"remove",
+			"listento",
+			"complete",
+			"remaining",
+			"checked",
+			"edit",
+			"view",
+			"editing",
+			"edit",
+			"$input",
+			"todof",
+			"ishidden",
+			"todoview",
+			"addAll",
+			"ad",
+			"addOne",
+			"filterAll",
+			"todolist",
+			"addone",
+			"each",
+			"addone",
+			"TodoView",
+			"todos",
+			"appview",
+			"todos",
+			"box",
+			"allcheckbox",
+			"checked",
+			"app.appview",
+			"createonenter",
+			".create",
+			"createonenter",
+			"create",
+			"todolist",
+			"TodoView",
+			"todos",
+			"nextorder",
+			"template",
+			"bar",
+			"    ",
+			"jade",
+			"path",
+			"monk",
+			"mailer",
+			"rec",
+			"size",
+			"fixtures:",
+			"action_mailer",
+			"mail",
+			"cart",
+			"should get new",
+			"build_cart",
+			"addres",
+			"address",
+			"addres[^s]",
+			"address{0,0}",
+			"address{0}",
+			"addres[s]{0}",
+			"addres",
+			"CurrentCart"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"`'$el'`",
+			"`'el'`",
+			"src=\"/MerchantUploads/edgeCaliforniaTaxidermy/",
+			"  ",
+			"address"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/justin/code/JS/node/express/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1530,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 254.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "portfolio.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"packag",
+				"package.json"
+			],
+			[
+				"twee",
+				"views/tweets.ejs"
+			],
+			[
+				"",
+				"custom_modules.js"
+			],
+			[
+				"todo",
+				"models/todo.js"
+			],
+			[
+				"colto",
+				"collections/todos.js"
+			],
+			[
+				"vap",
+				"views/app.js"
+			],
+			[
+				"moto",
+				"models/todo.js"
+			],
+			[
+				"in",
+				"index.html"
+			],
+			[
+				"sc",
+				"script.js"
+			],
+			[
+				"home",
+				"views/home.jade"
+			],
+			[
+				".jade",
+				"views/home.jade"
+			],
+			[
+				"applic",
+				"node_modules/express/lib/application.js"
+			],
+			[
+				"app.j",
+				"node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/examples/fileapi/public/app.js"
+			],
+			[
+				"index.js",
+				"routes/index.js"
+			],
+			[
+				"index.jad",
+				"views/index.jade"
+			],
+			[
+				"useli",
+				"views/userlist.jade"
+			],
+			[
+				"inde",
+				"views/index.jade"
+			],
+			[
+				"app",
+				"app.js"
+			],
+			[
+				"views",
+				"views/index.jade"
+			],
+			[
+				"index",
+				"routes/index.js"
+			],
+			[
+				"app.js",
+				"app.js"
+			],
+			[
+				"packa",
+				"package.json"
+			],
+			[
+				"av",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"layap",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
+				"confenvde",
+				"config/environments/development.rb"
+			],
+			[
+				"gemf",
+				"Gemfile"
+			],
+			[
+				"received.t",
+				"app/views/order_notifier/received.text.erb"
+			],
+			[
+				"shipped.t",
+				"app/views/order_notifier/shipped.text.erb"
+			],
+			[
+				"litext",
+				"app/views/line_items/_line_item.text.erb"
+			],
+			[
+				"_li",
+				"app/views/line_items/_line_item.html.erb"
+			],
+			[
+				"product",
+				"test/fixtures/products.yml"
+			],
+			[
+				"avono",
+				"app/views/order_notifier/shipped.html.erb"
+			],
+			[
+				"ont",
+				"test/mailers/order_notifier_test.rb"
+			],
+			[
+				"products.",
+				"test/fixtures/products.yml"
+			],
+			[
+				"amon",
+				"app/mailers/order_notifier.rb"
+			],
+			[
+				"ust",
+				"test/integration/user_stories_test.rb"
+			],
+			[
+				"controller_test",
+				"test/controllers/carts_controller_test.rb"
+			],
+			[
+				"shipp",
+				"app/views/order_notifier/shipped.html.erb"
+			],
+			[
+				"confdev",
+				"config/environments/development.rb"
+			],
+			[
+				"orcon",
+				"app/controllers/orders_controller.rb"
+			],
+			[
+				"avonotif",
+				"app/views/order_notifier/received.text.erb"
+			],
+			[
+				"coenvdev",
+				"config/environments/development.rb"
+			],
+			[
+				"cenv",
+				"config/environments/test.rb"
+			],
+			[
+				"proco",
+				"app/controllers/products_controller.rb"
+			],
+			[
+				"prod",
+				"app/models/product.rb"
+			],
+			[
+				"li.r",
+				"app/models/line_item.rb"
+			],
+			[
+				"conro",
+				"config/routes.rb"
+			],
+			[
+				"amp",
+				"app/models/product.rb"
+			],
+			[
+				"acpc",
+				"app/controllers/products_controller.rb"
+			],
+			[
+				"licon",
+				"app/controllers/line_items_controller.rb"
+			],
+			[
+				"avlimo",
+				"app/views/line_items/modify.js.erb"
+			],
+			[
+				"ocon",
+				"app/controllers/orders_controller.rb"
+			],
+			[
+				"cartshow",
+				"app/views/carts/show.html.erb"
+			],
+			[
+				"cct",
+				"test/controllers/carts_controller_test.rb"
+			],
+			[
+				"ccon",
+				"app/controllers/carts_controller.rb"
+			],
+			[
+				"order",
+				"app/models/order.rb"
+			],
+			[
+				"oct",
+				"test/controllers/orders_controller_test.rb"
+			],
+			[
+				"line_it",
+				"app/models/line_item.rb"
+			],
+			[
+				"order.",
+				"app/models/order.rb"
+			],
+			[
+				"oc",
+				"app/controllers/orders_controller.rb"
+			],
+			[
+				"amord",
+				"app/models/order.rb"
+			],
+			[
+				"li",
+				"app/models/line_item.rb"
+			],
+			[
+				"fixli",
+				"test/fixtures/line_items.yml"
+			],
+			[
+				"tfo",
+				"test/fixtures/orders.yml"
+			],
+			[
+				"lirb",
+				"app/models/line_item.rb"
+			],
+			[
+				"tfli",
+				"test/fixtures/line_items.yml"
+			],
+			[
+				"tfor",
+				"test/fixtures/orders.yml"
+			],
+			[
+				"o_",
+				"app/views/orders/_form.html.erb"
+			],
+			[
+				"avon",
+				"app/views/orders/new.html.erb"
+			],
+			[
+				"aassa",
+				"app/assets/stylesheets/application.css.scss"
+			],
+			[
+				"amo",
+				"app/models/order.rb"
+			],
+			[
+				"_form",
+				"app/views/orders/_form.html.erb"
+			],
+			[
+				"seed",
+				"db/seeds.rb"
+			],
+			[
+				"tcoct",
+				"test/controllers/orders_controller_test.rb"
+			],
+			[
+				"acoc",
+				"app/controllers/orders_controller.rb"
+			],
+			[
+				"_cart",
+				"app/views/carts/_cart.html.erb"
+			],
+			[
+				"adorder",
+				"db/migrate/20150403151553_add_order_to_line_itetem.rb"
+			],
+			[
+				"avof",
+				"app/views/orders/_form.html.erb"
+			],
+			[
+				"migco",
+				"db/migrate/20150309064434_create_orders.rb"
+			],
+			[
+				"current_",
+				"app/controllers/concerns/current_cart.rb"
+			],
+			[
+				"avcc",
+				"app/views/carts/_cart.html.erb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
