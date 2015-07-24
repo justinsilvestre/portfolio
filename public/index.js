@@ -1,5 +1,7 @@
 $(function(){
 
+	$('body').removeClass('stop-transitions');
+
 	var assetsClicked = 0;
 	$('.assets').on('click', 'h2', function() {
 		if(!$(this).hasClass('clicked')) assetsClicked += 1;

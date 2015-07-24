@@ -2,8 +2,9 @@ $smaller: "screen and (max-width: 499px)";
 $bigger: "screen and (min-width: 500px)";
 
 
-
 .home {
+
+	footer { @media #{$smaller} { position: static; margin-top: 7em; } }
 
 	.main-content {
 	  width: 100%;
@@ -18,7 +19,7 @@ $bigger: "screen and (min-width: 500px)";
 		font-size: $phi * $phi * 1rem;
 		font-weight: 100;
 
-		transition: color 2s;
+		transition: color .5s;
 		&.all-clicked { color: $blue; 
 			& small { color: lighten($blue, 20%); } }
 
@@ -29,17 +30,16 @@ $bigger: "screen and (min-width: 500px)";
 			font-size: 1em / $notphi;
 			text-transform: lowercase;
 
-			transition: color 2s;
+			transition: color .5s;
 		}
 	}
 	
 	$sea: #1F7171;
-	// $sunset: #E87100;
-	$sunset: #FF7C00;
 	$sunset: #DD6C00;
-	$stone: #5B4500;
 	$stone: #A17B19;
-	// $stone: #07A97E;
+
+	$orange: #FFA200;
+	$brown: #482424;
 
 	div.assets {
 		position: relative;
@@ -52,33 +52,32 @@ $bigger: "screen and (min-width: 500px)";
 			position: absolute;
 			left: 50%;
 			@media #{$bigger} { transform: translate(-50%); }
-			@media #{$smaller} { position: static; }
+			@media #{$smaller} { position: static; margin-top: 4em; }
 			
 			text-align: center;
 		  font-size: $phi * 1rem;
 		  font-family: $header-font;
 		  font-weight: 100;
-
-			transition: color .25s;
-			&:hover { cursor: pointer;  }
+		
 
 
-			&.technical { color: $sea; 
+			&.technical { color: $blue; 
 				top: 0;
-				&:hover { color: lighten($sea, 20%); }
-				&.clicked { transition: color 2s; color: black; }
+				&:hover { color: lighten($blue, 20%); }
 			}
-			&.creative { color: $sunset;
+			&.creative { color: $orange;
 				top: 1em;
-				&:hover { color: scale-color($sunset, $lightness: 20%); }
-				&.clicked { transition: color 2s; color: black; }
+				&:hover { color: scale-color($orange, $lightness: 20%); }
 			}
-		  &.cultural  { color: $stone; 
+		  &.cultural  { color: $brown; 
 		  	top: 2em;
-		 		&:hover { color: scale-color($stone, $lightness: 20%); }
-		 		&.clicked { transition: color 2s; color: black; }
+		 		&:hover { color: scale-color($brown, $lightness: 20%); }
 			}
 
+					&.clicked { transition: color 2s; color: black; }
+
+			transition: color .25s; 
+			&:hover { cursor: pointer; }
 		}
 
 		section.details {
@@ -98,45 +97,47 @@ $bigger: "screen and (min-width: 500px)";
 			line-height: $notphi;
 
 			animation-name: detail;
-			animation-duration: .5s;
+			animation-duration: 1s;
 		}
 	}
 
 
-.bg {
-position: absolute;
-top: 0; bottom: 0; right: 0; left: 0;
-background-position: center;
-background-size: 100% auto;
-background-repeat: no-repeat;
-opacity: 0;
-transition: opacity 2s;
-}
+	.bg {
+		position: absolute;
+		top: 0; bottom: 0; right: 0; left: 0;
+		z-index: -1;
 
-#bg1 {
-	background-image: url(bg-blue.png);
+		background-position: center;
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		
+		opacity: 0;
 
-}
+		transition: opacity 3s;
+		
+		&.active {
+			opacity: 1;
+		}
+		&#bg1 {
+			background-image: url(blue.png);
+		}
 
-#bg2 {
-	background-image: url(bg-orange.png);
+		&#bg2 {
+			background-image: url(orange.png);
 
-}
-#bg3 {
-	background-image: url(bg-brown.png);
+		}
+		&#bg3 {
+			background-image: url(brown.png);
 
-}
+		}
+	}
 
-.bg.active {
-	opacity: 1;
-}
-
-@media screen and (max-width: 500px) {
-	.bg { opacity: 1; }
-	#bg1 { top: 0%;}
-	#bg2 { top: 33%;}
-	#bg3 { top: 66%;}
-}
+	@media #{$smaller} {
+		.bg { opacity: 1; }
+		#bg1 { background-position: center 25%;}
+		#bg2 { background-position: center 50%;}
+		#bg3 { background-position: center 75%;}
+	}
 
 
 
