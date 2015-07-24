@@ -12,10 +12,26 @@
 	"buffers":
 	[
 		{
-			"file": "/home/justin/code/JS/node/express/app.js",
+			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 1530,
+				"buffer_size": 2081,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/_home.scss",
+			"settings":
+			{
+				"buffer_size": 2510,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/styles.scss",
+			"settings":
+			{
+				"buffer_size": 68,
 				"line_ending": "Unix"
 			}
 		}
@@ -84,6 +100,19 @@
 	],
 	"file_history":
 	[
+		"/home/justin/.cache/.fr-pDX67r/lightbox2-master/src/js/lightbox.js",
+		"/media/justin/C0B27350B2734A44/Users/JS/Desktop/portfolio/public/styles.scss",
+		"/media/justin/C0B27350B2734A44/Users/JS/Desktop/portfolio/public/_global.scss",
+		"/media/justin/C0B27350B2734A44/Users/JS/Desktop/portfolio/public/_home.scss",
+		"/media/justin/C0B27350B2734A44/Users/JS/Desktop/portfolio/index.html",
+		"/media/justin/C0B27350B2734A44/Users/JS/Desktop/portfolio/app.js",
+		"/media/justin/C0B27350B2734A44/Users/JS/Desktop/portfolio/public/_global.css",
+		"/media/justin/C0B27350B2734A44/Users/JS/Desktop/portfolio/public/.gitignore",
+		"/media/justin/C0B27350B2734A44/Users/JS/Desktop/portfolio/.gitignore",
+		"/media/justin/C0B27350B2734A44/Users/JS/Desktop/portfolio/public/mod.css",
+		"/media/justin/C0B27350B2734A44/Users/JS/Desktop/portfolio/public/_home.css",
+		"/media/justin/C0B27350B2734A44/Users/JS/Desktop/portfolio/_reset.css",
+		"/media/justin/C0B27350B2734A44/Users/JS/Desktop/portfolio/package.json",
 		"/media/justin/C0B27350B2734A44/Users/JS/Desktop/RegimenMD/regimen_practice_signup.html",
 		"/home/justin/code/SG/original/machii/mach-ii.cfc",
 		"/home/justin/code/SG/original/machii/mach-ii.cfm",
@@ -172,7 +201,7 @@
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -187,6 +216,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"absolute",
+			"height: 3",
+			"footer",
+			"margin",
+			"margin-top",
+			"transition",
 			"req",
 			"node",
 			"pipe",
@@ -335,33 +370,91 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/home/justin/code/JS/node/express/app.js",
+					"file": "index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1530,
+						"buffer_size": 2081,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1385,
+								1385
 							]
 						],
 						"settings":
 						{
 							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 312.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "public/_home.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2510,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1881,
+								1881
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1057.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "public/styles.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 68,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								68,
+								68
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -369,7 +462,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 26.0
+		"height": 21.0
 	},
 	"input":
 	{
@@ -410,7 +503,7 @@
 	"project": "portfolio.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 40.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -419,6 +512,58 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"styles",
+				"public/styles.scss"
+			],
+			[
+				"home",
+				"public/_home.scss"
+			],
+			[
+				"_glob",
+				"public/_global.scss"
+			],
+			[
+				"global.scss",
+				"public/_global.scss"
+			],
+			[
+				"global",
+				"public/_global.css"
+			],
+			[
+				"style",
+				"public/styles.scss"
+			],
+			[
+				"index",
+				"index.html"
+			],
+			[
+				"home.s",
+				"public/_home.scss"
+			],
+			[
+				"home.c",
+				"public/_home.css"
+			],
+			[
+				"mod",
+				"public/mod.css"
+			],
+			[
+				"mod.cs",
+				"public/mod.css"
+			],
+			[
+				"reset",
+				"_reset.css"
+			],
+			[
+				"pack",
+				"package.json"
+			],
 			[
 				"packag",
 				"package.json"
@@ -456,10 +601,6 @@
 				"script.js"
 			],
 			[
-				"home",
-				"views/home.jade"
-			],
-			[
 				".jade",
 				"views/home.jade"
 			],
@@ -494,10 +635,6 @@
 			[
 				"views",
 				"views/index.jade"
-			],
-			[
-				"index",
-				"routes/index.js"
 			],
 			[
 				"app.js",

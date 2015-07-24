@@ -10,6 +10,7 @@ $bigger: "screen and (min-width: 500px)";
 	  width: 100%;
 	  max-width: 870px;
 	  margin: 0 auto;
+	  position: relative;
 	}
 
 	h1 {
@@ -103,7 +104,7 @@ $bigger: "screen and (min-width: 500px)";
 
 
 	.bg {
-		position: absolute;
+		position: fixed;
 		top: 0; bottom: 0; right: 0; left: 0;
 		z-index: -1;
 
@@ -112,35 +113,36 @@ $bigger: "screen and (min-width: 500px)";
 		background-repeat: no-repeat;
 		
 		opacity: 0;
-
-		transition: opacity 3s;
 		
 		&.active {
 			opacity: 1;
 		}
 		&#bg1 {
-			background-image: url(blue.png);
+			background-image: url(bluelines.png);
+			transition: opacity 4s;
 		}
 
 		&#bg2 {
-			background-image: url(orange.png);
+			background-image: url(orangedots.png);
+			transition: opacity 2s;
 
 		}
 		&#bg3 {
-			background-image: url(brown.png);
+			background-image: url(brownboxes.png);
+			transition: opacity 1s;
 
 		}
+
+		@media #{$smaller} { 
+			position: absolute;
+			opacity: 1;
+
+			&#bg1 { background-position: center 25%;}
+			&#bg2 { background-position: center 50%;}
+			&#bg3 { background-position: center 75%;}
+		}
+
 	}
-
-	@media #{$smaller} {
-		.bg { opacity: 1; }
-		#bg1 { background-position: center 25%;}
-		#bg2 { background-position: center 50%;}
-		#bg3 { background-position: center 75%;}
-	}
-
-
-
 
 }
 
