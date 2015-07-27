@@ -30,43 +30,91 @@ html {
 	box-sizing: border-box;
 }
 
+$footer-height: 3rem;
+
 body {
 	min-height: 100%;
 	position: relative;
 
 	font-family: $serif;
 
-	$footer-height: 3rem;
-	padding-bottom: $footer-height;
 	box-sizing: border-box;
-	footer {
-		position: absolute;
-		bottom: 0;
-		min-height: $footer-height;
-		padding: .5rem 2rem;
-	  width: 100%;
-	  box-sizing: border-box;
-
-	  text-align: right;
-
-	  li {
-	  	display: inline-block;
-	  	padding: .25rem .5rem;
-	  	box-sizing: border-box;
-
-	  	text-align: center; 
-
-			@media screen and (max-width: 500px) { width: 100%; }
-
-	  }
-	  a {
-	  	color: inherit;
-	  	&:hover {
-	  		color: #1D4983;
-	  	}
-	  }
-	}
 }
 
 
-.stop-transitions * { transition: none !important; }
+footer {
+	position: absolute;
+	bottom: 0;
+	min-height: $footer-height;
+	padding: .5rem 2rem;
+  width: 100%;
+  box-sizing: border-box;
+
+  text-align: right;
+
+  li {
+  	display: inline-block;
+  	padding: .25rem .5rem;
+  	box-sizing: border-box;
+
+  	text-align: center; 
+
+		@media screen and (max-width: 500px) { width: 100%; }
+
+		& #twitter {
+			position: relative;
+
+			#tweet {
+				
+				display: none;
+
+				position: absolute;
+		    bottom: 150%;
+		    right: -100%;
+		    // margin-left: -50%;
+		    width: 300%;
+		    min-height: 4rem;
+		    padding: 1em;
+		    box-sizing: border-box;
+		  
+		  	background-color: white;
+		    font-size: 1rem / $notphi;
+		    line-height: $notphi;
+		    font-family: $sans-serif;
+		    color: black;
+		    text-align: left;
+		    border: solid 1px #C1CEE9;
+		    border-radius: .5em;
+			}
+			&:hover #tweet {
+				display: block;
+				opacity: 1;
+
+				animation-duration: .25s;
+		    animation-name: up-in;
+			}
+			#tweet-info {
+				display: block;
+				text-align: right;
+				color: #7B7B7B;
+			}
+		}
+
+	}
+
+}
+	a {
+		color: inherit;
+		&:hover {
+			color: #1D4983;
+		}
+	}
+	
+
+@keyframes up-in {
+	from {transform: translate(0, 10%); opacity: 0;}
+	to { transform: translate(0,0); opacity: 1;}
+}
+
+
+.stop-transitions * { transition: none !important; animation-name: none !important; }

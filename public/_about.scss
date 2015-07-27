@@ -1,0 +1,51 @@
+#about {
+
+	#main-content {
+		max-width: 500px;
+		margin: 0 auto;
+	
+
+	h1 {
+		font-size: $phi * $notphi * 1rem;
+		text-align: center;
+		margin: 7% auto;
+	}
+
+	p {
+		padding: 0 $notphi * 1rem;
+		box-sizing: border-box;
+
+		margin: 1rem auto;
+		line-height: $phi;
+	}	
+
+	#trajectory {
+		margin: 7% auto;
+		text-align: center;
+	}
+
+	#trajectory li {
+		display: inline-block;
+		font-family: $header-font;
+		position: relative;
+		vertical-align: top;
+		padding-left: .25em;
+		padding-right:.25em;
+
+		span { display: block; }
+		span.year {
+			color: #888686;
+			font-size: 1em / $notphi;
+		}
+		&:last-child span.year {
+			color: #FFB500;
+    	font-weight: bold;
+		}
+	}
+
+
+	}
+
+	 footer { @media screen and (max-width: 500px) { position: static; margin-top: 4em; } }
+
+}

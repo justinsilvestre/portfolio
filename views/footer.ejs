@@ -1,0 +1,16 @@
+<footer>
+	<ul>
+		<li><a href="/about">about me</a></li>
+		<li>
+			<a id="twitter" href="http://twitter.com/justsilvestrein"><i class="fa fa-twitter"></i> Twitter
+			<p id="tweet">
+				<%- tweet.text %>
+				<span id="tweet-info"><%- tweet.tweet_info %></span>
+			</p>
+			</a>
+		</li>
+		<li><a href="http://github.com/justinsilvestre"><i class="fa fa-github"></i> Github</a></li>
+	</ul>
+</footer>
+<script>thobject = <%- JSON.stringify(tweet) %></script>
+

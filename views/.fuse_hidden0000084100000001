@@ -36,6 +36,7 @@
 				<li>Rails, Foundation/SASS, Backbone.js</li>
 				<li>A passion for object-oriented design</li>
 			</ul>
+			<%- tweets[0] %>
 		</section>
 
 		<h2 class="creative">creative eye</h2>
@@ -60,14 +61,7 @@
 
 </div>
 
-<footer>
-	<ul>
-		<li><a href="#">about me</a></li>
-		<li><a href="#">things I like</a></li>
-		<li><a href="http://twitter.com/justsilvestrein"><i class="fa fa-twitter"></i> Twitter</a></li>
-		<li><a href="http://github.com/justinsilvestre"><i class="fa fa-github"></i> Github</a></li>
-	</ul>
-</footer>
+<%- include footer %>
 
 </body>
 
