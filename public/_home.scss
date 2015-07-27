@@ -22,7 +22,8 @@ $bigger: "screen and (min-width: 700px)";
 
 		transition: color .75s;
 
-		&.all { color: $blue; 
+		&.all-clicked { 
+			cursor: pointer; color: $blue; 
 			& small { color: lighten($blue, 20%); } }
 
 		small {
@@ -100,7 +101,7 @@ $bigger: "screen and (min-width: 700px)";
 
 			line-height: $notphi;
 
-			animation-name: detail;
+			animation-name: fade-in;
 			animation-duration: 1s;
 		}
 	}
@@ -168,9 +169,34 @@ $bigger: "screen and (min-width: 700px)";
 
 	}
 
+
+	#gallery {
+		img.thumbnail {
+			height: 2em;
+			width: auto;
+			margin: .25em;
+		}
+	}
+
+	#lightbox {
+		position: fixed;
+		top: 0; left: 0; right: 0; bottom: 0;
+		background-color: rgba(73, 84, 97, 0.9);
+		animation-name: fade-in;
+		animation-duration: .3s;
+	}
+	#lightbox img {
+		max-height: 90%;
+		position: absolute;
+		left: 50%; top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+
 }
 
-@keyframes detail {
+@keyframes fade-in {
 	from { opacity: 0; }
 	to { opacity: 1; }
 }
+

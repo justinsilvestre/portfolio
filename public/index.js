@@ -1,22 +1,3 @@
-/*	var scrollBg = function() {
-			var bg, section;
-			for (var i = 1; i <= 3; i++) {
-				bg = $('#bg' + i);
-				section = $('.assets').children('section:nth-of-type('+ i + ')');
-
-				var scrollTop = $(document).scrollTop();
-				var viewportHeight = $(window).height();
-
-				var reachedBg = ( scrollTop + (viewportHeight - bg.outerHeight())/2 ) >= bg.offset().top;
-				var mainContent = $('#main-content');
-				// var reachedBg = ( scrollTop + (viewportHeight - bg.outerHeight())/2 ) >= ( (mainContent.offset().top + mainContent.height()) * (0.25 + i * 0.25) );
-
-				bg.toggleClass('scrolled', reachedBg);
-				// bg.toggleClass('scrolled', ($(document).scrollTop() + ($(window).height()/2) - (bg.height()/2)) >= (bg.offset().top) )
-			}
-	};*/
-
-
 $(function(){
 
 
@@ -29,24 +10,41 @@ $(function(){
 		$('.details').removeClass('active');
 		$('#assets').children('section:nth-of-type('+ i + ')').addClass('active');
 
-
-		if (assetsClicked <3) {
 			$('.bg').removeClass('active');
 			$('#bg'+ i).addClass('active');
-		}
 
 
 		if (assetsClicked === 3) {
 			$('h1').addClass('all-clicked');
 			//body addclass allclicked.... change styles
-					$('.bg').addClass('active');
 		}
+
+		$('.all-clicked').on('click', function() {
+			$('.bg').addClass('active');
+			$(this).removeClass('all-clicked');
+			$('h2').removeClass('clicked');
+			assetsClicked = 0;
+		})
 
 	});
 
 
 		// scrollBg();
 		// $(document).scroll(scrollBg);
+
+
+	$('#gallery').on('click', 'a', function(event) {
+		event.preventDefault();
+		var src =  $(this).attr('href');
+		$('#lightbox').remove();
+		$('body').append('<div id="lightbox">');
+		$('#lightbox').appendTo('body').append('<img src="' + src + '">')
+			.on('click', function(event) {
+				event.preventDefault();
+				$(this).remove();
+		});
+	});
+
 
 
 });

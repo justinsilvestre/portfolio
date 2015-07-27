@@ -2,8 +2,10 @@ var express = require('express'),
 		app = express(),
 		server = require('http').createServer(app),
 		ejs = require('ejs'),
-		OAuth = require('oauth'),
-    moment = require('moment');
+		OAuth = require('oauth');
+
+app.locals.moment = require('moment');
+app.locals._ = require('underscore-node');
 
 var environment = (process.env.NODE_ENV === 'production') ? process.env : require('./twitterstuff');
 
@@ -34,16 +36,17 @@ app.renderResponse = function(filename) {
       environment.TWITTER_APP_SECRET,
 
       function (event, data, res){
-        if (event) console.error(event);        
+        if (event) {console.error(event); } else {        
         console.log(data);
         var tweets = JSON.parse(data);
         var tweet = tweets[0];
         tweet.full_text = tweet.retweeted ? tweet.retweeted_status.text : tweet.text;
 
-        var then = moment(tweet.created_at)
-        tweet.tweet_info = moment(then).fromNow();
+        var then = app.locals.moment(tweet.created_at)
+        tweet.tweet_info = app.locals.moment(then).fromNow();
 
-        response.render(filename, {tweet: tweet}); 
+        response.render(filename, {tweet: tweet});             }
+
       }
     );
   };
