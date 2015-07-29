@@ -42,7 +42,7 @@ app.renderResponse = function(filename) {
         var tweet = tweets[0];
         tweet.full_text = tweet.retweeted ? tweet.retweeted_status.text : tweet.text;
 
-        var then = app.locals.moment(tweet.created_at)
+        var then = app.locals.moment(Date.parse(tweet.created_at));
         tweet.tweet_info = app.locals.moment(then).fromNow();
 
         response.render(filename, {tweet: tweet});             }
