@@ -1,6 +1,6 @@
-$sans-serif: 'Helvetica', 'Neue Helvetica', 'Arial', serif;
+$sans-serif: 'Open Sans', 'Helvetica', 'Neue Helvetica', 'Arial', serif;
 $serif: 'Quattrocento', 'Georgia', serif;
-$header-font: 'Raleway';
+$header-font: 'Maven Pro';
 $phi: 1.61803399;
 $notphi: 1.25;
 $blue: #00378A;
@@ -36,7 +36,7 @@ body {
 	min-height: 100%;
 	position: relative;
 
-	font-family: $serif;
+	font-family: $sans-serif;
 
 	box-sizing: border-box;
 	padding-bottom: $footer-height;
@@ -64,7 +64,7 @@ footer {
   	padding: .25rem .5rem;
   	box-sizing: border-box;
 
-  	text-align: center; 
+  	text-align: center;
 
 		@media screen and (max-width: 500px) { width: 100%; }
 
@@ -72,7 +72,7 @@ footer {
 			position: relative;
 
 			#tweet {
-				
+
 				display: none;
 
 				position: absolute;
@@ -83,7 +83,7 @@ footer {
 		    min-height: 4rem;
 		    padding: 1em;
 		    box-sizing: border-box;
-		  
+
 		  	background-color: white;
 		    font-size: 1rem / $notphi;
 		    line-height: $notphi;
@@ -117,7 +117,7 @@ footer {
 			color: #1D4983;
 		}
 	}
-	
+
 
 @keyframes up-in {
 	from {transform: translate(0, 10%); opacity: 0;}
