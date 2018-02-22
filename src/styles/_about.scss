@@ -1,9 +1,18 @@
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 #about {
 
 	#main-content {
 		max-width: 500px;
 		margin: 0 auto;
-	
+
 
 	h1 {
 		font-size: $phi * $notphi * 1rem;
@@ -17,7 +26,7 @@
 
 		margin: 1rem auto;
 		line-height: $phi;
-	}	
+	}
 
 	#trajectory {
 		margin: 7% auto;
@@ -43,9 +52,11 @@
 		}
 	}
 
-	
+
 
 	#flash {
+		animation-name: fadeIn;
+		animation-duration: .3s;
 		color: white;
 		display: none;
 		position: fixed;
@@ -62,6 +73,9 @@
 			height: auto;
 		}
 
+		&.flash {
+			display: block;
+		}
 	}
 
 

@@ -2,3 +2,7 @@ node_modules
 *.log
 twitterstuff.js
 scrollbg.js
+.cache/
+public/
+.DS_Store
+yarn-error.log

@@ -22,8 +22,8 @@ $bigger: "screen and (min-width: 601px)";
 
 		transition: color .75s;
 
-		&.all-clicked { 
-			cursor: pointer; color: $blue; 
+		&.all-clicked {
+			cursor: pointer; color: $blue;
 			& small { color: lighten($blue, 20%); } }
 
 		small {
@@ -36,7 +36,7 @@ $bigger: "screen and (min-width: 601px)";
 			transition: color .5s;
 		}
 	}
-	
+
 	$sea: #006E9F;
 	$deepsea: #213869;
 	$sunset: #DD6C00;
@@ -57,14 +57,14 @@ $bigger: "screen and (min-width: 601px)";
 			left: 50%;
 			@media #{$bigger} { transform: translate(-50%); }
 			@media #{$smaller} { position: static; margin-top: 4em; }
-			
+
 			text-align: center;
 		  font-size: $phi * 1rem;
 		  font-family: $header-font;
-		
+
 			@mixin clicked { &.clicked { transition: color 2s; color: black; } }
 
-			&.technical { color: $sea; 
+			&.technical { color: $sea;
 				top: 0;
 				&:hover { color: lighten($sea, 20%); }
 				@include clicked;
@@ -74,13 +74,13 @@ $bigger: "screen and (min-width: 601px)";
 				&:hover { color: scale-color($orange, $lightness: 40%); }
 				@include clicked;
 				}
-		  &.cultural  { color: $deepsea; 
+		  &.cultural  { color: $deepsea;
 		  	top: 2em;
 		 		&:hover { color: scale-color($deepsea, $lightness: 30%); }
 				@include clicked;
 			}
 
-			transition: color .25s; 
+			transition: color .25s;
 			&:hover { cursor: pointer; }
 		}
 
@@ -118,36 +118,36 @@ $bigger: "screen and (min-width: 601px)";
 		background-position: center;
 		background-size: 100% auto;
 		background-repeat: no-repeat;
-		
+
 		opacity: 0;
-		
+
 		&.active {
 			opacity: 1;
 		}
 		&#bg1 {
-			background-image: url(bluelines.png);
+			background-image: url(../images/bluelines.png);
 			transition: opacity 4s;
 		}
 
 		&#bg2 {
-			background-image: url(orangedotslight.png);
+			background-image: url(../images/orangedotslight.png);
 			transition: opacity 2s;
 
 		}
 		&#bg3 {
-			background-image: url(brownboxes.png);
+			background-image: url(../images/brownboxes.png);
 			transition: opacity 1s;
 
 		}
 
-		@media #{$smaller} { 
+		@media #{$smaller} {
 			position: absolute;
 			padding-top: 70%;
 			width: 100%;
 			height: auto;
 			opacity: 1;
 			top: auto; left: auto;
-			
+
 			background-position: center;
 			@mixin scrolled {
 				&.scrolled {
@@ -202,4 +202,3 @@ $bigger: "screen and (min-width: 601px)";
 	from { opacity: 0; }
 	to { opacity: 1; }
 }
-
