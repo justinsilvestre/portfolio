@@ -7,10 +7,6 @@ const Footer = () =>
   		<li><Link to="/about">about me</Link></li>
   		<li>
   			<a id="twitter" href="http://twitter.com/justsilvestrein"><i class="fa fa-twitter"></i> Twitter
-  			<p id="tweet">
-  				Tweet tweet
-  				<span id="tweet-info">tweet tweet tweet</span>
-  			</p>
   			</a>
   		</li>
   		<li><a href="https://github.com/justinsilvestre?tab=repositories"><i class="fa fa-github"></i> Github</a></li>

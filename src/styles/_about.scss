@@ -1,3 +1,12 @@
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 #about {
 
 	#main-content {
@@ -46,6 +55,8 @@
 
 
 	#flash {
+		animation-name: fadeIn;
+		animation-duration: .3s;
 		color: white;
 		display: none;
 		position: fixed;
