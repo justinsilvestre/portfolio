@@ -103,18 +103,18 @@ class IndexPage extends Component {
 
       	<div id="assets">
 
-      		<h2 className={cn('technical', { clicked: coder })} onClick={this.transition('coder')}>coder</h2>
+      		<h2 className={cn('technical', { clicked: coder })} onClick={this.transition('coder')}>functional code</h2>
 
       		<section className={cn('technical', 'details', { active: active === 'coder' })}>
-      			<ul>
-      				<li><a href="http://tokipona.xyz">React.js,</a> <a href="https://www.gitbook.com/book/justinsilvestre/unit-testing-in-atg/details">Node.js</a>, <a href="https://docs.google.com/document/d/1ZdEm8Bn1Z-61WmZ1pq27CFos7-vgabrVJOiYX8odFcI/edit?usp=sharing" target="_blank">more</a></li>
-      				<li>Currently leading the front-end team for a new single-page application at <a href="https://www.forbes.com/companies/copart/">Copart.</a></li>
-      			</ul>
+      		  <p><a href="http://tokipona.xyz">React.js,</a> <a href="https://www.gitbook.com/book/justinsilvestre/unit-testing-in-atg/details">Node.js</a>, <a href="https://docs.google.com/document/d/1ZdEm8Bn1Z-61WmZ1pq27CFos7-vgabrVJOiYX8odFcI/edit?usp=sharing" target="_blank">more</a>.</p>
+            <p>Currently doing mostly frontend at <a href="http://liefery.com">Liefery</a> in Berlin, Germany.</p>
       		</section>
 
-      		<h2 className={cn('creative', { clicked: creative })} onClick={this.transition('creative')}>creative</h2>
+      		<h2 className={cn('creative', { clicked: creative })} onClick={this.transition('creative')}>craftsmanship</h2>
 
       		<section className={cn('creative', 'details', { active: active === 'creative' })}>
+            <p>I like making things to look at!</p>
+            <p>Still finding my aesthetic.</p>
       			<div id="gallery">
       				<h3>web</h3>
                 {Object.entries(WEB).map(([name, image]) =>
@@ -127,11 +127,11 @@ class IndexPage extends Component {
       			</div>
       		</section>
 
-      		<h2 className={cn('cultural', { clicked: cognoscente })} onClick={this.transition('cognoscente')}>cognoscente</h2>
+      		<h2 className={cn('cultural', { clicked: cognoscente })} onClick={this.transition('cognoscente')}>culture</h2>
 
       		<section className={cn('cultural', 'details', { active: active === 'cognoscente' })}>
-      			<p>Educated in English, French, and Spanish</p>
-      			<p>B.A. French &amp; Spanish St John's University <i>cum laude</i></p>
+      			<p><b>Current mission:</b> read the <a href="http://en.wikipedia.org/wiki/Daodejing"><i>Daodejing</i></a> in the original classical Chinese by the end of 2018.</p>
+            <p><b>Preliminary goal:</b> learn to read and write <a href="http://github.com/justinsilvestre/classical-chinese">1000 characters</a> by summer.</p>
       		</section>
 
       	</div>
