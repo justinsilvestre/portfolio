@@ -205,7 +205,7 @@ class IndexPage extends Component {
           >
             <p>
               <b>Current mission</b>–to stop my compulsive classical Chinese
-              studying from getting in the way of my goal of C2-level German.
+              studying from getting in the way of my goal of C1-level German.
             </p>
             <p>
               Here's{' '}
