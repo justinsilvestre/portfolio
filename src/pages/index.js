@@ -110,22 +110,13 @@ class IndexPage extends Component {
 
     return (
       <div id="main-content">
-        <div
-          id="bg1"
-          className={cn('bg', { active: active == 'coder' || taDah })}
-        />
-        <div
-          id="bg2"
-          className={cn('bg', { active: active == 'creative' || taDah })}
-        />
-        <div
-          id="bg3"
-          className={cn('bg', { active: active == 'cognoscente' || taDah })}
-        />
+        <div id="bg1" className={cn('bg', { active: coder })} />
+        <div id="bg2" className={cn('bg', { active: creative })} />
+        <div id="bg3" className={cn('bg', { active: cognoscente })} />
 
         <h1 className={cn({ 'all-clicked': allClicked })} onClick={this.reset}>
           <span id="my-name">Justin Silvestre</span>
-          <small>Web Developer</small>
+          <small>Software Developer</small>
         </h1>
 
         <div id="assets">
@@ -133,7 +124,7 @@ class IndexPage extends Component {
             className={cn('technical', { clicked: coder })}
             onClick={this.transition('coder')}
           >
-            functional code
+            code
           </h2>
 
           <section
@@ -142,9 +133,12 @@ class IndexPage extends Component {
             })}
           >
             <p>
-              <a href="http://tokipo.net">React.js,</a>{' '}
-              <a href="https://www.gitbook.com/book/justinsilvestre/unit-testing-in-atg/details">
-                Node.js
+              <a href="https://github.com/justinsilvestre/audio-flashcard-assistant">
+                React,
+              </a>{' '}
+              <a href="http://tokipo.net">Redux,</a>{' '}
+              <a href="https://justinsilvestre.gitbooks.io/unit-testing-in-atg/content/">
+                Node
               </a>
               ,{' '}
               <a

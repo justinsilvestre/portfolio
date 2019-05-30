@@ -62,7 +62,7 @@ $bigger: "screen and (min-width: 601px)";
 		  font-size: $phi * 1rem;
 		  font-family: $header-font;
 
-			@mixin clicked { &.clicked { transition: color 2s; color: black; } }
+			@mixin clicked { &.clicked { transition: color .25s; color: black; } }
 
 			&.technical { color: $sea;
 				top: 0;
@@ -80,7 +80,7 @@ $bigger: "screen and (min-width: 601px)";
 				@include clicked;
 			}
 
-			transition: color .25s;
+			transition: color 1s .5s;
 			&:hover { cursor: pointer; }
 		}
 
@@ -136,22 +136,23 @@ $bigger: "screen and (min-width: 601px)";
 
 		opacity: 0;
 
+		transition: opacity .5s ;
+
 		&.active {
 			opacity: 1;
+			transition: opacity .7s .25s;
+
 		}
 		&#bg1 {
 			background-image: url(../images/bluelines.png);
-			transition: opacity 4s;
 		}
 
 		&#bg2 {
 			background-image: url(../images/orangedotslight.png);
-			transition: opacity 2s;
 
 		}
 		&#bg3 {
 			background-image: url(../images/brownboxes.png);
-			transition: opacity 1s;
 
 		}
 
