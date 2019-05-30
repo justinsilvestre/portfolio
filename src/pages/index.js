@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import cn from 'classnames'
+import Layout from '../components/Layout'
 import chairJpg from '../images/gallery/chair.jpg'
 import chairThumbJpg from '../images/gallery/chairthumb.jpg'
 import peachJpg from '../images/gallery/peach.jpg'
@@ -86,7 +87,7 @@ class IndexPage extends Component {
   }
 
   reset = () => {
-    const { coder, creative, cognoscente, allClicked } = this.state
+    const { allClicked } = this.state
     if (allClicked) {
       this.setState({ ...INITIAL_STATE, taDah: true })
     }
@@ -104,119 +105,125 @@ class IndexPage extends Component {
       cognoscente,
       allClicked,
       active,
-      taDah,
       image,
     } = this.state
+    const { location } = this.props
 
     return (
-      <div id="main-content">
-        <div id="bg1" className={cn('bg', { active: coder })} />
-        <div id="bg2" className={cn('bg', { active: creative })} />
-        <div id="bg3" className={cn('bg', { active: cognoscente })} />
+      <Layout location={location}>
+        <div id="main-content">
+          <div id="bg1" className={cn('bg', { active: coder })} />
+          <div id="bg2" className={cn('bg', { active: creative })} />
+          <div id="bg3" className={cn('bg', { active: cognoscente })} />
 
-        <h1 className={cn({ 'all-clicked': allClicked })} onClick={this.reset}>
-          <span id="my-name">Justin Silvestre</span>
-          <small>Software Developer</small>
-        </h1>
-
-        <div id="assets">
-          <h2
-            className={cn('technical', { clicked: coder })}
-            onClick={this.transition('coder')}
+          <h1
+            className={cn({ 'all-clicked': allClicked })}
+            onClick={this.reset}
           >
-            code
-          </h2>
+            <span id="my-name">Justin Silvestre</span>
+            <small>Software Developer</small>
+          </h1>
 
-          <section
-            className={cn('technical', 'details', {
-              active: active === 'coder',
-            })}
-          >
-            <p>
-              <a href="https://github.com/justinsilvestre/audio-flashcard-assistant">
-                React,
-              </a>{' '}
-              <a href="http://tokipo.net">Redux,</a>{' '}
-              <a href="https://justinsilvestre.gitbooks.io/unit-testing-in-atg/content/">
-                Node
-              </a>
-              ,{' '}
-              <a
-                href="https://docs.google.com/document/d/1ZdEm8Bn1Z-61WmZ1pq27CFos7-vgabrVJOiYX8odFcI/edit?usp=sharing"
-                target="_blank"
-              >
-                more
-              </a>
-              .
-            </p>
-            <p>
-              Currently doing frontend and mobile at{' '}
-              <a href="http://liefery.com">Liefery</a> in Berlin, Germany.
-            </p>
-          </section>
+          <div id="assets">
+            <h2
+              className={cn('technical', { clicked: coder })}
+              onClick={this.transition('coder')}
+            >
+              code
+            </h2>
 
-          <h2
-            className={cn('creative', { clicked: creative })}
-            onClick={this.transition('creative')}
-          >
-            craftsmanship
-          </h2>
-
-          <section
-            className={cn('creative', 'details', {
-              active: active === 'creative',
-            })}
-          >
-            <p>I like making things to look at!</p>
-            <p>Still finding my aesthetic.</p>
-            <div id="gallery">
-              <h3>web</h3>
-              {Object.entries(WEB).map(([name, image]) => (
-                <a href={image} onClick={this.showImage(image)}>
-                  <img className="thumbnail" src={THUMBS[name]} alt="" />
+            <section
+              className={cn('technical', 'details', {
+                active: active === 'coder',
+              })}
+            >
+              <p>
+                <a href="https://github.com/justinsilvestre/audio-flashcard-assistant">
+                  React,
+                </a>{' '}
+                <a href="http://tokipo.net">Redux,</a>{' '}
+                <a href="https://justinsilvestre.gitbooks.io/unit-testing-in-atg/content/">
+                  Node
                 </a>
-              ))}
-              <h3>sketchbook</h3>
-              {Object.entries(SKETCHBOOK).map(([name, image]) => (
-                <a href={image} onClick={this.showImage(image)}>
-                  <img className="thumbnail" src={THUMBS[name]} alt="" />
+                ,{' '}
+                <a
+                  href="https://docs.google.com/document/d/1ZdEm8Bn1Z-61WmZ1pq27CFos7-vgabrVJOiYX8odFcI/edit?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  more
                 </a>
-              ))}
-            </div>
-          </section>
+                .
+              </p>
+              <p>
+                Currently doing frontend and mobile at{' '}
+                <a href="http://liefery.com">Liefery</a> in Berlin, Germany.
+              </p>
+            </section>
 
-          <h2
-            className={cn('cultural', { clicked: cognoscente })}
-            onClick={this.transition('cognoscente')}
-          >
-            curiosity
-          </h2>
+            <h2
+              className={cn('creative', { clicked: creative })}
+              onClick={this.transition('creative')}
+            >
+              craftsmanship
+            </h2>
 
-          <section
-            className={cn('cultural', 'details', {
-              active: active === 'cognoscente',
-            })}
-          >
-            <p>
-              <b>Current mission</b>–to stop my compulsive classical Chinese
-              studying from getting in the way of my goal of C1-level German.
-            </p>
-            <p>
-              Here's{' '}
-              <a href="https://github.com/justinsilvestre/audio-flashcard-assistant">
-                something I built
-              </a>{' '}
-              to help me learn Chinese.
-            </p>
-          </section>
-        </div>
+            <section
+              className={cn('creative', 'details', {
+                active: active === 'creative',
+              })}
+            >
+              <p>I like making things to look at!</p>
+              <p>Still finding my aesthetic.</p>
+              <div id="gallery">
+                <h3>web</h3>
+                {Object.entries(WEB).map(([name, image]) => (
+                  <a href={image} onClick={this.showImage(image)}>
+                    <img className="thumbnail" src={THUMBS[name]} alt="" />
+                  </a>
+                ))}
+                <h3>sketchbook</h3>
+                {Object.entries(SKETCHBOOK).map(([name, image]) => (
+                  <a href={image} onClick={this.showImage(image)}>
+                    <img className="thumbnail" src={THUMBS[name]} alt="" />
+                  </a>
+                ))}
+              </div>
+            </section>
 
-        {image && (
-          <div id="lightbox" onClick={this.showImage(null)}>
-            <img src={image} />
+            <h2
+              className={cn('cultural', { clicked: cognoscente })}
+              onClick={this.transition('cognoscente')}
+            >
+              curiosity
+            </h2>
+
+            <section
+              className={cn('cultural', 'details', {
+                active: active === 'cognoscente',
+              })}
+            >
+              <p>
+                <b>Current mission</b>–to stop my compulsive classical Chinese
+                studying from getting in the way of my goal of C1-level German.
+              </p>
+              <p>
+                Here's{' '}
+                <a href="https://github.com/justinsilvestre/audio-flashcard-assistant">
+                  something I built
+                </a>{' '}
+                to help me learn Chinese.
+              </p>
+            </section>
           </div>
-        )}
-      </div>
+
+          {image && (
+            <div id="lightbox" onClick={this.showImage(null)}>
+              <img src={image} />
+            </div>
+          )}
+        </div>
+      </Layout>
     )
   }
 }

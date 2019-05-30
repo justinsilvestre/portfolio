@@ -2,11 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import Header from '../components/Header'
 import Footer from '../components/Footer'
 import '../styles/styles.scss'
 
-const TemplateWrapper = ({ children, location }) => (
+const Layout = ({ children, location }) => (
   <div>
     <link
       href="https://fonts.googleapis.com/css?family=Karla|Roboto:300,400&display=swap"
@@ -24,13 +23,13 @@ const TemplateWrapper = ({ children, location }) => (
       bodyAttributes={{ id: location.pathname === '/' ? 'home' : 'about' }}
     />
 
-    {children()}
+    {children}
     <Footer />
   </div>
 )
 
-TemplateWrapper.propTypes = {
+Layout.propTypes = {
   children: PropTypes.func,
 }
 
-export default TemplateWrapper
+export default Layout
