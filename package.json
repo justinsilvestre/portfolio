@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gatsby serve",
+    "start": "GATSBY_TELEMETRY_DISABLED=1 gatsby serve",
     "build": "gatsby build",
     "heroku-postbuild": "gatsby build",
     "develop": "gatsby develop"
