@@ -12,12 +12,12 @@ const Layout = ({ children, location }) => (
       rel="stylesheet"
     />
     <Helmet
-      title="Justin Silvestre - Web Developer"
+      title="Justin Silvestre - Software Developer"
       meta={[
         {
           name: 'description',
           content:
-            'Berlin-based web developer specializing in functional frontend code.',
+            'Berlin-based software developer specializing in functional JavaScript.',
         },
       ]}
       bodyAttributes={{ id: location.pathname === '/' ? 'home' : 'about' }}
