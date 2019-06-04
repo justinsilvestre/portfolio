@@ -81,7 +81,7 @@ $bigger: "screen and (min-width: 601px)";
 			}
 
 			transition: color 1s .5s;
-			&:hover { cursor: pointer; }
+			&:hover { cursor: pointer; transition: color .5s; }
 		}
 
 		section.details {
