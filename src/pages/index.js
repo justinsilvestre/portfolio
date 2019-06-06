@@ -209,7 +209,7 @@ class IndexPage extends Component {
               </p>
               <p>
                 Here's{' '}
-                <a href="https://www.youtube.com/watch?v=H_NFSVkK8kM">
+                <a href="https://www.youtube.com/watch?v=kFEfS8dyKQ8">
                   something I built
                 </a>{' '}
                 to help me learn Chinese.
