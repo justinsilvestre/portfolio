@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import cn from 'classnames'
+import '../styles/about.scss'
 import pimpleGif from '../images/oldgifs/pimplelqsmall.gif'
-import Layout from '../components/Layout'
 
 class About extends Component {
   state = {
@@ -13,59 +13,57 @@ class About extends Component {
     const { location } = this.props
 
     return (
-      <Layout location={location}>
-        <div id="main-content">
-          <h1>About Justin</h1>
+      <div id="about">
+        <h1>About Justin</h1>
 
-          <ul id="trajectory">
-            <li>
-              <span>
-                <a href="https://en.wikipedia.org/wiki/Bethlehem,_Pennsylvania">
-                  PA
-                </a>
-              </span>{' '}
-              <span class="year">1991</span>
-            </li>{' '}
-            <li>→</li>
-            <li>
-              <span>New York</span> <span class="year">2010</span>
-            </li>{' '}
-            <li>→</li>
-            <li>
-              <span>Dallas</span> <span class="year">2014</span>
-            </li>{' '}
-            <li>→</li>
-            <li>
-              <span>Berlin</span> <span class="year">2017</span>
-            </li>
-          </ul>
+        <ul id="trajectory">
+          <li>
+            <span>
+              <a href="https://en.wikipedia.org/wiki/Bethlehem,_Pennsylvania">
+                PA
+              </a>
+            </span>{' '}
+            <span class="year">1991</span>
+          </li>{' '}
+          <li>→</li>
+          <li>
+            <span>New York</span> <span class="year">2010</span>
+          </li>{' '}
+          <li>→</li>
+          <li>
+            <span>Dallas</span> <span class="year">2014</span>
+          </li>{' '}
+          <li>→</li>
+          <li>
+            <span>Berlin</span> <span class="year">2017</span>
+          </li>
+        </ul>
 
-          <p>Life goal: joining beauty with utility.</p>
+        <p>Life goal: joining beauty with utility.</p>
 
-          <p>
-            Justin's experience reaches back to his childhood, when he made
-            websites to showcase his artwork and{' '}
-            <a
-              id="flash-link"
-              href="#flash"
-              onClick={() => this.setState({ flash: true })}
-            >
-              experiments in Flash
-            </a>
-            . That creative bent has translated to a passion for expressiveness
-            and sound craftsmanship in his code.
-          </p>
-          <div
-            id="flash"
-            className={cn({ flash })}
-            onClick={() => this.setState({ flash: false })}
+        <p>
+          Justin's experience reaches back to his childhood, when he made
+          websites to showcase his artwork and{' '}
+          <a
+            id="flash-link"
+            href="#flash"
+            onClick={() => this.setState({ flash: true })}
           >
-            <div>
-              <img src={pimpleGif} alt="" />
-            </div>
+            experiments in Flash
+          </a>
+          . That creative bent has translated to a passion for expressiveness
+          and sound craftsmanship in his code.
+        </p>
+        <div
+          id="flash"
+          className={cn({ flash })}
+          onClick={() => this.setState({ flash: false })}
+        >
+          <div>
+            <img src={pimpleGif} alt="" />
           </div>
         </div>
-      </Layout>
+      </div>
     )
   }
 }

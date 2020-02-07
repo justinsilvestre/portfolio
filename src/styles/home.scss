@@ -1,0 +1,264 @@
+@import './variables.scss';
+
+$smaller: 'screen and (max-width: 600px)';
+$bigger: 'screen and (min-width: 601px)';
+
+footer {
+  @media #{$smaller} {
+    position: static;
+    margin-top: 7em;
+  }
+}
+
+#home {
+  width: 100%;
+  max-width: 870px;
+  margin: 0 auto;
+  position: relative;
+}
+
+h1 {
+  padding: 7% 1rem;
+
+  text-align: center;
+  font-size: $phi * $phi * 1rem;
+  font-weight: 100;
+
+  transition: color 0.75s;
+
+  &.all-clicked {
+    cursor: pointer;
+    color: $blue;
+    & small {
+      color: lighten($blue, 20%);
+    }
+  }
+
+  small {
+    display: block;
+    margin-top: 0.5em;
+
+    font-size: 1em / $notphi;
+    text-transform: lowercase;
+
+    transition: color 0.5s;
+  }
+}
+
+$sea: #006e9f;
+$deepsea: #213869;
+$sunset: #dd6c00;
+$stone: #a17b19;
+
+$orange: #ea7d00;
+$brown: #7e3f3f;
+
+div#assets {
+  position: relative;
+
+  @media #{$bigger} {
+    padding-top: calc(7% + 4.85410197rem);
+  }
+  box-sizing: border-box;
+
+  h2 {
+    position: absolute;
+    left: 50%;
+    @media #{$bigger} {
+      transform: translate(-50%);
+    }
+    @media #{$smaller} {
+      position: static;
+      margin-top: 4em;
+    }
+
+    text-align: center;
+    font-size: $phi * 1rem;
+    font-family: $header-font;
+
+    @mixin clicked {
+      &.clicked {
+        transition: color 0.25s;
+        color: black;
+      }
+    }
+
+    &.technical {
+      color: $sea;
+      top: 0;
+      &:hover {
+        color: lighten($sea, 20%);
+      }
+      @include clicked;
+    }
+    &.creative {
+      color: $orange;
+      top: 1em;
+      &:hover {
+        color: scale-color($orange, $lightness: 40%);
+      }
+      @include clicked;
+    }
+    &.cultural {
+      color: $deepsea;
+      top: 2em;
+      &:hover {
+        color: scale-color($deepsea, $lightness: 30%);
+      }
+      @include clicked;
+    }
+
+    transition: color 1s 0.5s;
+    &:hover {
+      cursor: pointer;
+      transition: color 0.5s;
+    }
+  }
+
+  section.details {
+    display: none;
+    @media #{$smaller} {
+      display: block;
+    }
+
+    &.active {
+      display: block;
+    }
+
+    width: 100%;
+    margin: 0 auto;
+    padding: 1em;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+
+    line-height: $notphi;
+
+    animation-name: fade-in;
+    animation-duration: 1s;
+
+    strong,
+    b {
+      font-weight: bold;
+    }
+
+    p,
+    ul {
+      text-align: left;
+      max-width: 20em;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    p {
+      margin-bottom: 1em;
+    }
+  }
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  box-sizing: border-box;
+
+  background-position: center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+
+  opacity: 0;
+
+  transition: opacity 0.5s;
+
+  &.active {
+    opacity: 1;
+    transition: opacity 0.7s 0.25s;
+  }
+  &#bg1 {
+    background-image: url(../images/bluelines.png);
+  }
+
+  &#bg2 {
+    background-image: url(../images/orangedotslight.png);
+  }
+  &#bg3 {
+    background-image: url(../images/brownboxes.png);
+  }
+
+  @media #{$smaller} {
+    position: absolute;
+    padding-top: 70%;
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    top: auto;
+    left: auto;
+
+    background-position: center;
+    @mixin scrolled {
+      &.scrolled {
+        position: fixed;
+        bottom: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &#bg1 {
+      bottom: 50%;
+      @include scrolled;
+    }
+    &#bg2 {
+      bottom: 25%;
+      @include scrolled;
+    }
+    &#bg3 {
+      bottom: 0%;
+      @include scrolled;
+    }
+
+    // &.scrolled { position: fixed; background-position: center bottom;}
+  }
+}
+
+#gallery {
+  img.thumbnail {
+    height: 2em;
+    width: auto;
+    margin: 0.25em;
+  }
+}
+
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(73, 84, 97, 0.9);
+  animation-name: fade-in;
+  animation-duration: 0.3s;
+}
+#lightbox img {
+  max-width: 100%;
+  max-height: 90%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
