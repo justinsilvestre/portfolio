@@ -9,7 +9,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Karla', 'Roboto'],
+          families: ['Karla', 'Roboto:300,400'],
         },
       },
     },
