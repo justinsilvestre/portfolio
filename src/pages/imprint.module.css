@@ -1,0 +1,16 @@
+.imprint {
+  overflow: auto;
+}
+
+.heading {
+  margin-top: 3rem;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.address {
+  margin: 2em auto;
+  width: 20em;
+  text-align: center;
+  line-height: 2;
+}
