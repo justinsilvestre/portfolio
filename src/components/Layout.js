@@ -19,7 +19,7 @@ const Layout = ({ children, location }) => (
     />
 
     {children}
-    <Footer />
+    <Footer location={location} />
   </>
 )
 

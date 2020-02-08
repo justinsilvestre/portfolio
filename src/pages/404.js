@@ -1,10 +1,13 @@
 import React from 'react'
+import { Redirect } from '@reach/router'
+import Index from './index'
 
-const NotFoundPage = () => (
-  <div>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </div>
-)
+const NotFoundPage = ({ ...props }) => {
+  if (global.window) {
+    window.location = '/'
+  }
+
+  return <Index {...props} />
+}
 
 export default NotFoundPage
