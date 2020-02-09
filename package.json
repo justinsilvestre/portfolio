@@ -1,5 +1,6 @@
 {
   "name": "portfolio",
+  "private": true,
   "version": "0.0.1",
   "description": "My portfolio site",
   "main": "app.js",
@@ -21,12 +22,9 @@
   "license": "ISC",
   "dependencies": {
     "classnames": "^2.2.5",
-    "ejs": "^3.0.1",
-    "express": "^4.17.1",
     "gatsby": "^2.19.12",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sass": "^2.0.11",
-    "gatsby-plugin-web-font-loader": "^1.0.4",
     "http": "0.0.0",
     "moment": "^2.24.0",
     "node-sass": "^4.12.0",
@@ -34,8 +32,8 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.0",
-    "react-router-dom": "^5.1.2",
-    "underscore-node": "^0.1.2",
+    "typeface-karla": "^0.0.72",
+    "typeface-roboto": "^0.0.75",
     "url": "^0.10.3",
     "webpack": "^4.32.2"
   }
