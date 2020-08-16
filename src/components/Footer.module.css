@@ -1,0 +1,6 @@
+@media screen and (max-width: 600px) {
+  .homeFooter {
+    position: static;
+    margin-top: 7em;
+  }
+}

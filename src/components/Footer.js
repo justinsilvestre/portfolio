@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import css from './Footer.module.css'
 
 const Footer = ({ location: { pathname } }) => {
   const strippedPathname = pathname.replace(/\//g, '')
   return (
-    <footer>
+    <footer className={strippedPathname === '' ? css.homeFooter : ''}>
       <ul>
         {strippedPathname !== '' && (
           <li>

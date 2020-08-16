@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import cn from 'classnames'
-import '../styles/home.scss'
+// import '../styles/home.scss'
+import css from './index.module.css'
 import chairJpg from '../images/gallery/chair.jpg'
 import chairThumbJpg from '../images/gallery/chairthumb.jpg'
 import peachJpg from '../images/gallery/peach.jpg'
@@ -110,30 +111,30 @@ class IndexPage extends Component {
     const { location } = this.props
 
     return (
-      <div id="home">
-        <div id="bg1" className={cn('bg', { active: coder })} />
-        <div id="bg2" className={cn('bg', { active: creative })} />
-        <div id="bg3" className={cn('bg', { active: cognoscente })} />
+      <div className={css.container}>
+        <div className={cn(css.bg1, { [css.bgActive]: coder })} />
+        <div className={cn(css.bg2, { [css.bgActive]: creative })} />
+        <div className={cn(css.bg3, { [css.bgActive]: cognoscente })} />
 
-        <h1 className={cn({ 'all-clicked': allClicked })} onClick={this.reset}>
-          <span id="my-name">Justin Silvestre</span>
-          <small>Software Developer</small>
+        <h1 className={cn(css.header, { [css.allClicked]: allClicked })} onClick={this.reset}>
+          <span>Justin Silvestre</span>
+          <small className={css.headerSmall}>Software Developer</small>
         </h1>
 
-        <div id="assets">
+        <div className={css.assets}>
           <h2
-            className={cn('technical', { clicked: coder })}
+            className={cn(css.technicalHeader, { [css.assetHeaderClicked]: coder })}
             onClick={this.transition('coder')}
           >
             code
           </h2>
 
           <section
-            className={cn('technical', 'details', {
-              active: active === 'coder',
+            className={cn(css.details, {
+              [css.detailsActive]: active === 'coder',
             })}
           >
-            <p>
+            <p className={css.detailsP}>
               <a href="https://github.com/justinsilvestre/audio-flashcard-assistant">
                 React,
               </a>{' '}
@@ -151,59 +152,59 @@ class IndexPage extends Component {
               </a>
               .
             </p>
-            <p>
+            <p className={css.detailsP}>
               Currently doing frontend and mobile at{' '}
               <a href="http://liefery.com">Liefery</a> in Berlin, Germany.
             </p>
           </section>
 
           <h2
-            className={cn('creative', { clicked: creative })}
+            className={cn(css.creativeHeader, { [css.assetHeaderClicked]: creative })}
             onClick={this.transition('creative')}
           >
             craftsmanship
           </h2>
 
           <section
-            className={cn('creative', 'details', {
-              active: active === 'creative',
+            className={cn(css.details, {
+              [css.detailsActive]: active === 'creative',
             })}
           >
-            <p>I like making things to look at!</p>
-            <p>Still finding my aesthetic.</p>
-            <div id="gallery">
+            <p className={css.detailsP}>I like making things to look at!</p>
+            <p  className={css.detailsP}>Still finding my aesthetic.</p>
+            <div className={css.gallery}>
               <h3>web</h3>
               {Object.entries(WEB).map(([name, image]) => (
                 <a href={image} onClick={this.showImage(image)}>
-                  <img className="thumbnail" src={THUMBS[name]} alt="" />
+                  <img className={css.galleryThumbnail} src={THUMBS[name]} alt="" />
                 </a>
               ))}
               <h3>sketchbook</h3>
               {Object.entries(SKETCHBOOK).map(([name, image]) => (
                 <a href={image} onClick={this.showImage(image)}>
-                  <img className="thumbnail" src={THUMBS[name]} alt="" />
+                  <img className={css.galleryThumbnail} src={THUMBS[name]} alt="" />
                 </a>
               ))}
             </div>
           </section>
 
           <h2
-            className={cn('cultural', { clicked: cognoscente })}
+            className={cn(css.culturalHeader, { [css.assetHeaderClicked]: cognoscente })}
             onClick={this.transition('cognoscente')}
           >
             curiosity
           </h2>
 
           <section
-            className={cn('cultural', 'details', {
-              active: active === 'cognoscente',
+            className={cn(css.details, {
+              [css.detailsActive]: active === 'cognoscente',
             })}
           >
-            <p>
-              <b>Current mission</b>–to stop my compulsive classical Chinese
+            <p  className={css.detailsP}>
+              <b className={css.detailsBold}>Current mission</b>–to stop my compulsive classical Chinese
               studying from getting in the way of my goal of C1-level German.
             </p>
-            <p>
+            <p  className={css.detailsP}>
               Here's{' '}
               <a href="https://www.youtube.com/watch?v=kFEfS8dyKQ8">
                 something I built
@@ -214,8 +215,8 @@ class IndexPage extends Component {
         </div>
 
         {image && (
-          <div id="lightbox" onClick={this.showImage(null)}>
-            <img src={image} />
+          <div className={css.lightBox} onClick={this.showImage(null)}>
+            <img className={css.lightBoxImg} src={image} />
           </div>
         )}
       </div>
