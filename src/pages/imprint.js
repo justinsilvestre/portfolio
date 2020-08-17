@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import css from './imprint.module.css'
-import Layout from '../components/Layout'
 
 class ImprintPage extends Component {
   render() {
