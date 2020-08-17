@@ -1,0 +1,86 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.header {
+  composes: fontSizePhi from '../styles/shared.module.css';
+  text-align: center;
+  margin: 7% auto;
+}
+
+.p {
+  padding: 0 1.25rem;
+  box-sizing: border-box;
+
+  margin: 1rem auto;
+  composes: lineHeightPhi from '../styles/shared.module.css';
+}
+
+.trajectory {
+  margin: 7% auto;
+  text-align: center;
+}
+
+.trajectoryLi {
+  composes: headerFont from '../styles/shared.module.css';
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+.trajectoryLiSpan {
+  display: block;
+}
+.trajectoryLocation {
+  composes: trajectoryLiSpan;
+}
+.trajectoryYear {
+  composes: trajectoryLiSpan;
+  composes: smallTextsize from '../styles/shared.module.css';
+  color: #888686;
+}
+.trajectoryLi:last-child .trajectoryYear {
+  color: #ffb500;
+  font-weight: bold;
+}
+
+.flash {
+  animation-name: fadeIn;
+  animation-duration: 0.3s;
+  color: white;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(73, 84, 97, 0.9);
+  text-align: center;
+}
+
+.flashImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 90%;
+  width: auto;
+  height: auto;
+}
+
+.flashActive {
+  display: block;
+}
