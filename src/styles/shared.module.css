@@ -10,7 +10,6 @@
 .headerFont {
   font-family: 'Karla', sans-serif;
 }
-
 .fontSizePhi {
   font-size: 1.61803399rem;
 }
@@ -33,6 +32,9 @@
   line-height: 1.25;
 }
 
+
+
+
 .blueText {
   color: #00378A;
 }
@@ -47,3 +49,12 @@
   color: #0060f0;
 }
 
+
+
+
+.paddingBottomFooterHeight {
+  padding-bottom: 3rem;
+}
+.footerMinHeight {
+  height: 3rem;
+}
