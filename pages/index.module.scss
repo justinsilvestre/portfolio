@@ -179,6 +179,7 @@ $brown: #7e3f3f;
   background-color: rgba(73, 84, 97, 0.9);
   animation-name: fade-in;
   animation-duration: 0.3s;
+  z-index: 1;
 }
 .lightboxImg {
   max-width: 100%;

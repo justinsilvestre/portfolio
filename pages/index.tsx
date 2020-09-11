@@ -221,8 +221,8 @@ function IndexPage() {
         </div>
 
         {image && (
-          <div className={css.lightBox} onClick={showImage(null)}>
-            <img className={css.lightBoxImg} src={image || undefined} />
+          <div className={css.lightbox} onClick={showImage(null)}>
+            <img className={css.lightboxImg} src={image || undefined} />
           </div>
         )}
       </div>
