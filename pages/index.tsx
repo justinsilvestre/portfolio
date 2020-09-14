@@ -66,29 +66,29 @@ const WEB = {
 }
 
 const INITIAL_STATE = {
-  coder: false,
-  creative: false,
-  cognoscente: false,
+  code: false,
+  craftsmanship: false,
+  curiosity: false,
   taDah: false,
   active: null,
   image: null,
 }
 type State = {
-  coder: boolean,
-  creative: boolean,
-  cognoscente: boolean,
+  code: boolean,
+  craftsmanship: boolean,
+  curiosity: boolean,
   taDah: boolean,
   active: Header | null,
   image: string | null,
 }
-type Header = 'coder' | 'creative' | 'cognoscente'
+type Header = 'code' | 'craftsmanship' | 'curiosity'
 
 function IndexPage() {
   const [state, setState] = useState<State>(INITIAL_STATE)
   const {
-    coder,
-    creative,
-    cognoscente,
+    code,
+    craftsmanship,
+    curiosity,
     active,
     image,
   } = state
@@ -102,7 +102,7 @@ function IndexPage() {
     })
   }
 
-  const allClicked = coder && creative && cognoscente
+  const allClicked = code && craftsmanship && curiosity
 
   const reset = () => {
     if (allClicked) {
@@ -118,9 +118,9 @@ function IndexPage() {
   return (
     <Layout>
       <div className={css.container}>
-        <div className={cn(css.bg1, { [css.bgActive]: coder })} />
-        <div className={cn(css.bg2, { [css.bgActive]: creative })} />
-        <div className={cn(css.bg3, { [css.bgActive]: cognoscente })} />
+        <div className={cn(css.bg1, { [css.bgActive]: code })} />
+        <div className={cn(css.bg2, { [css.bgActive]: craftsmanship })} />
+        <div className={cn(css.bg3, { [css.bgActive]: curiosity })} />
 
         <h1 className={cn(css.header, { [css.allClicked]: allClicked })} onClick={reset}>
           <span>Justin Silvestre</span>
@@ -129,15 +129,15 @@ function IndexPage() {
 
         <div className={css.assets}>
           <h2
-            className={cn(css.technicalHeader, { [css.assetHeaderClicked]: coder })}
-            onClick={transition('coder')}
+            className={cn(css.technicalHeader, { [css.assetHeaderClicked]: code })}
+            onClick={transition('code')}
           >
             code
           </h2>
 
           <section
             className={cn(css.details, {
-              [css.detailsActive]: active === 'coder',
+              [css.detailsActive]: active === 'code',
             })}
           >
             <p className={css.detailsP}>
@@ -165,15 +165,15 @@ function IndexPage() {
           </section>
 
           <h2
-            className={cn(css.creativeHeader, { [css.assetHeaderClicked]: creative })}
-            onClick={transition('creative')}
+            className={cn(css.creativeHeader, { [css.assetHeaderClicked]: craftsmanship })}
+            onClick={transition('craftsmanship')}
           >
             craftsmanship
           </h2>
 
           <section
             className={cn(css.details, {
-              [css.detailsActive]: active === 'creative',
+              [css.detailsActive]: active === 'craftsmanship',
             })}
           >
             <p className={css.detailsP}>I like making things to look at!</p>
@@ -195,27 +195,24 @@ function IndexPage() {
           </section>
 
           <h2
-            className={cn(css.culturalHeader, { [css.assetHeaderClicked]: cognoscente })}
-            onClick={transition('cognoscente')}
+            className={cn(css.culturalHeader, { [css.assetHeaderClicked]: curiosity })}
+            onClick={transition('curiosity')}
           >
             curiosity
           </h2>
 
           <section
             className={cn(css.details, {
-              [css.detailsActive]: active === 'cognoscente',
+              [css.detailsActive]: active === 'curiosity',
             })}
           >
-            <p  className={css.detailsP}>
-              <b className={css.detailsBold}>Current mission</b>–to stop my compulsive classical Chinese
-              studying from getting in the way of my goal of C1-level German.
+            <p className={css.detailsP}>
+              Here's something I built <a className={css.link} href="https://www.youtube.com/watch?v=kFEfS8dyKQ8">to help me learn classical Chinese</a>,
+              which ended up morphing into a desktop app for learning any language with native videos.
             </p>
-            <p  className={css.detailsP}>
-              Here's{' '}
-              <a href="https://www.youtube.com/watch?v=kFEfS8dyKQ8">
-                something I built
-              </a>{' '}
-              to help me learn Chinese.
+            <p className={css.detailsP}>
+              Here's something else I built <a className={css.link} href="https://kanjijump.com">to help me learn Chinese/Japanese characters</a>.
+              It's a complete mnemonic system disguised as a dictionary, complete with etymological data.
             </p>
           </section>
         </div>
