@@ -10,7 +10,7 @@ class Imprint extends Component {
         <section className={css.container}>
           <h1 className={css.heading}>Impressum</h1>
           <p>
-            kanjijump@protonmail.com
+            justinsilvestre@gmail.com
           </p>
           <p>
             Justin Silvestre<br />
