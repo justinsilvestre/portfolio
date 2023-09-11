@@ -2,6 +2,9 @@ import React, { Component, Fragment } from 'react'
 import css from './imprint.module.scss'
 import Layout from '../components/MainLayout'
 
+const impressumAddress = process.env.NEXT_IMPRESSUM_ADDRESS || ''
+
+console.log({ impressumAddress })
 class Imprint extends Component {
   render() {
     return (
@@ -11,7 +14,7 @@ class Imprint extends Component {
           <p>justinsilvestre@gmail.com</p>
           <p>
             Justin Silvestre
-            {process.env.NEXT_IMPRESSUM_ADDRESS?.split(' / ').map((segment) => (
+            {impressumAddress.split(' / ').map((segment) => (
               <Fragment key={segment}>
                 <br />
                 {segment}
