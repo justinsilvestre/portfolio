@@ -11,7 +11,7 @@ class Imprint extends Component {
           <p>justinsilvestre@gmail.com</p>
           <p>
             Justin Silvestre
-            {process.env.IMPRESSUM_ADDRESS?.split(' / ').map((segment) => (
+            {process.env.NEXT_IMPRESSUM_ADDRESS?.split(' / ').map((segment) => (
               <Fragment key={segment}>
                 <br />
                 {segment}
