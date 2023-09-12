@@ -159,8 +159,13 @@ function IndexPage() {
               .
             </p>
             <p className={css.detailsP}>
-              Most recent gig: frontend and mobile at{' '}
-              <a href="http://liefery.com">Liefery</a> in Berlin, Germany.
+              Check out my <a
+            href="https://docs.google.com/document/d/1ZdEm8Bn1Z-61WmZ1pq27CFos7-vgabrVJOiYX8odFcI/edit?usp=sharing"
+            target="_blank"
+            className={css.link}
+          >
+            CV
+          </a>.
             </p>
           </section>
 
