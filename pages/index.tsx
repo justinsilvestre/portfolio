@@ -12,9 +12,12 @@ const donutThumbJpg = '/images/gallery/donutthumb.jpg'
 const selfJpg = '/images/gallery/self.jpg'
 const selfThumbJpg = '/images/gallery/selfthumb.jpg'
 const sgScreenshotCompositeJpg = '/images/gallery/sgscreenshotcomposite.jpg'
-const sgScreenshotCompositeThumbJpg = '/images/gallery/sgscreenshotcompositethumb.jpg'
-const janCarrittScreenshotCompositeJpg = '/images/gallery/jancarrittscreenshotcomposite.jpg'
-const janCarrittScreenshotCompositeThumbJpg = '/images/gallery/jancarrittscreenshotcompositethumb.jpg'
+const sgScreenshotCompositeThumbJpg =
+  '/images/gallery/sgscreenshotcompositethumb.jpg'
+const janCarrittScreenshotCompositeJpg =
+  '/images/gallery/jancarrittscreenshotcomposite.jpg'
+const janCarrittScreenshotCompositeThumbJpg =
+  '/images/gallery/jancarrittscreenshotcompositethumb.jpg'
 const kusamaThumbJpg = '/images/gallery/kusamathumb.jpg'
 const pierThumbJpg = '/images/gallery/pierthumb.jpg'
 const prospect1ThumbJpg = '/images/gallery/prospect1thumb.jpg'
@@ -44,8 +47,7 @@ const SKETCHBOOK = {
   kusama:
     'http://38.media.tumblr.com/eebe6d74bd9ad18adea1ef71147536b9/tumblr_inline_n403lx9bQ61rf8kqg.jpg',
   peach: peachJpg,
-  pier:
-    'http://justinsilvestresketchbook.weebly.com/uploads/1/7/1/6/17166696/2530596_orig.jpg',
+  pier: 'http://justinsilvestresketchbook.weebly.com/uploads/1/7/1/6/17166696/2530596_orig.jpg',
   donut: donutJpg,
   prospect1:
     'http://38.media.tumblr.com/75d0e9dae10e48674b2e4063fad62fa6/tumblr_inline_ml53vwzCIh1qz4rgp.jpg',
@@ -74,24 +76,18 @@ const INITIAL_STATE = {
   image: null,
 }
 type State = {
-  code: boolean,
-  craftsmanship: boolean,
-  curiosity: boolean,
-  taDah: boolean,
-  active: Header | null,
-  image: string | null,
+  code: boolean
+  craftsmanship: boolean
+  curiosity: boolean
+  taDah: boolean
+  active: Header | null
+  image: string | null
 }
 type Header = 'code' | 'craftsmanship' | 'curiosity'
 
 function IndexPage() {
   const [state, setState] = useState<State>(INITIAL_STATE)
-  const {
-    code,
-    craftsmanship,
-    curiosity,
-    active,
-    image,
-  } = state
+  const { code, craftsmanship, curiosity, active, image } = state
 
   const transition = (key: Header) => () => {
     setState({
@@ -122,14 +118,19 @@ function IndexPage() {
         <div className={cn(css.bg2, { [css.bgActive]: craftsmanship })} />
         <div className={cn(css.bg3, { [css.bgActive]: curiosity })} />
 
-        <h1 className={cn(css.header, { [css.allClicked]: allClicked })} onClick={reset}>
+        <h1
+          className={cn(css.header, { [css.allClicked]: allClicked })}
+          onClick={reset}
+        >
           <span>Justin Silvestre</span>
           <small className={css.headerSmall}>Software Developer</small>
         </h1>
 
         <div className={css.assets}>
           <h2
-            className={cn(css.technicalHeader, { [css.assetHeaderClicked]: code })}
+            className={cn(css.technicalHeader, {
+              [css.assetHeaderClicked]: code,
+            })}
             onClick={transition('code')}
           >
             code
@@ -159,18 +160,22 @@ function IndexPage() {
               .
             </p>
             <p className={css.detailsP}>
-              Check out my <a
-            href="https://docs.google.com/document/d/1ZdEm8Bn1Z-61WmZ1pq27CFos7-vgabrVJOiYX8odFcI/edit?usp=sharing"
-            target="_blank"
-            className={css.link}
-          >
-            CV
-          </a>.
+              Check out my{' '}
+              <a
+                href="https://docs.google.com/document/d/1ZdEm8Bn1Z-61WmZ1pq27CFos7-vgabrVJOiYX8odFcI/edit?usp=sharing"
+                target="_blank"
+                className={css.link}
+              >
+                CV
+              </a>
+              .
             </p>
           </section>
 
           <h2
-            className={cn(css.creativeHeader, { [css.assetHeaderClicked]: craftsmanship })}
+            className={cn(css.creativeHeader, {
+              [css.assetHeaderClicked]: craftsmanship,
+            })}
             onClick={transition('craftsmanship')}
           >
             craftsmanship
@@ -182,25 +187,35 @@ function IndexPage() {
             })}
           >
             <p className={css.detailsP}>I like making things to look at!</p>
-            <p  className={css.detailsP}>Still finding my aesthetic.</p>
+            <p className={css.detailsP}>Still finding my aesthetic.</p>
             <div className={css.gallery}>
               <h3>web</h3>
               {Object.entries(WEB).map(([name, image]) => (
                 <a href={image} onClick={showImage(image)}>
-                  <img className={css.galleryThumbnail} src={getThumbnailSrc(name)} alt="" />
+                  <img
+                    className={css.galleryThumbnail}
+                    src={getThumbnailSrc(name)}
+                    alt=""
+                  />
                 </a>
               ))}
               <h3>sketchbook</h3>
               {Object.entries(SKETCHBOOK).map(([name, image]) => (
                 <a href={image} onClick={showImage(image)}>
-                  <img className={css.galleryThumbnail} src={getThumbnailSrc(name)} alt="" />
+                  <img
+                    className={css.galleryThumbnail}
+                    src={getThumbnailSrc(name)}
+                    alt=""
+                  />
                 </a>
               ))}
             </div>
           </section>
 
           <h2
-            className={cn(css.culturalHeader, { [css.assetHeaderClicked]: curiosity })}
+            className={cn(css.culturalHeader, {
+              [css.assetHeaderClicked]: curiosity,
+            })}
             onClick={transition('curiosity')}
           >
             curiosity
@@ -212,12 +227,23 @@ function IndexPage() {
             })}
           >
             <p className={css.detailsP}>
-              Here's something I built <a className={css.link} href="https://www.youtube.com/watch?v=kFEfS8dyKQ8">to help me learn classical Chinese</a>,
-              which ended up morphing into a desktop app for learning any language with native videos.
+              Here's something I built{' '}
+              <a
+                className={css.link}
+                href="https://www.youtube.com/watch?v=kFEfS8dyKQ8"
+              >
+                to help me learn classical Chinese
+              </a>
+              , which ended up morphing into a desktop app for learning any
+              language with native videos.
             </p>
             <p className={css.detailsP}>
-              Here's something else I built <a className={css.link} href="https://kanjijump.com">to help me learn Chinese/Japanese characters</a>.
-              It's a complete mnemonic system disguised as a dictionary, complete with etymological data.
+              Here's something else I built{' '}
+              <a className={css.link} href="https://kanjisense.com">
+                to help me learn Chinese/Japanese characters
+              </a>
+              . It's a complete mnemonic system disguised as a dictionary,
+              complete with etymological data.
             </p>
           </section>
         </div>
@@ -233,7 +259,6 @@ function IndexPage() {
 }
 
 export default IndexPage
-
 
 function getThumbnailSrc(name: string): string | undefined {
   return THUMBS[name as keyof typeof THUMBS]
