@@ -1,30 +1,33 @@
+'use client'
+
 import React, { useState } from 'react'
 import cn from 'classnames'
 import css from './index.module.scss'
 import Layout from '../components/MainLayout'
 
-const chairJpg = '/images/gallery/chair.jpg'
-const chairThumbJpg = '/images/gallery/chairthumb.jpg'
-const peachJpg = '/images/gallery/peach.jpg'
-const peachThumbJpg = '/images/gallery/peachthumb.jpg'
-const donutJpg = '/images/gallery/donut.jpg'
-const donutThumbJpg = '/images/gallery/donutthumb.jpg'
-const selfJpg = '/images/gallery/self.jpg'
-const selfThumbJpg = '/images/gallery/selfthumb.jpg'
-const sgScreenshotCompositeJpg = '/images/gallery/sgscreenshotcomposite.jpg'
+const chairJpg = '../../public/images/gallery/chair.jpg'
+const chairThumbJpg = '../../public/images/gallery/chairthumb.jpg'
+const peachJpg = '../../public/images/gallery/peach.jpg'
+const peachThumbJpg = '../../public/images/gallery/peachthumb.jpg'
+const donutJpg = '../../public/images/gallery/donut.jpg'
+const donutThumbJpg = '../../public/images/gallery/donutthumb.jpg'
+const selfJpg = '../../public/images/gallery/self.jpg'
+const selfThumbJpg = '../../public/images/gallery/selfthumb.jpg'
+const sgScreenshotCompositeJpg =
+  '../../public/images/gallery/sgscreenshotcomposite.jpg'
 const sgScreenshotCompositeThumbJpg =
-  '/images/gallery/sgscreenshotcompositethumb.jpg'
+  '../../public/images/gallery/sgscreenshotcompositethumb.jpg'
 const janCarrittScreenshotCompositeJpg =
-  '/images/gallery/jancarrittscreenshotcomposite.jpg'
+  '../../public/images/gallery/jancarrittscreenshotcomposite.jpg'
 const janCarrittScreenshotCompositeThumbJpg =
-  '/images/gallery/jancarrittscreenshotcompositethumb.jpg'
-const kusamaThumbJpg = '/images/gallery/kusamathumb.jpg'
-const pierThumbJpg = '/images/gallery/pierthumb.jpg'
-const prospect1ThumbJpg = '/images/gallery/prospect1thumb.jpg'
-const prospect2ThumbJpg = '/images/gallery/prospect2thumb.jpg'
-const prospect3ThumbJpg = '/images/gallery/prospect3thumb.jpg'
-const westvillageThumbJpg = '/images/gallery/westvillagethumb.jpg'
-const harlemThumbJpg = '/images/gallery/harlemthumb.jpg'
+  '../../public/images/gallery/jancarrittscreenshotcompositethumb.jpg'
+const kusamaThumbJpg = '../../public/images/gallery/kusamathumb.jpg'
+const pierThumbJpg = '../../public/images/gallery/pierthumb.jpg'
+const prospect1ThumbJpg = '../../public/images/gallery/prospect1thumb.jpg'
+const prospect2ThumbJpg = '../../public/images/gallery/prospect2thumb.jpg'
+const prospect3ThumbJpg = '../../public/images/gallery/prospect3thumb.jpg'
+const westvillageThumbJpg = '../../public/images/gallery/westvillagethumb.jpg'
+const harlemThumbJpg = '../../public/images/gallery/harlemthumb.jpg'
 
 const THUMBS = {
   chair: chairThumbJpg,

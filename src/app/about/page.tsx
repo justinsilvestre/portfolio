@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import cn from 'classnames'
 import css from './about.module.css'
-import Layout from '../components/MainLayout'
+import Layout from '../../components/MainLayout'
 
 const pimpleGif = '/images/oldgifs/pimplelqsmall.gif'
 
@@ -29,15 +29,18 @@ class About extends Component {
             </li>{' '}
             <li className={css.trajectoryLi}>→</li>
             <li className={css.trajectoryLi}>
-              <span className={css.trajectoryLocation}>New York</span> <span className={css.trajectoryYear}>2010</span>
+              <span className={css.trajectoryLocation}>New York</span>{' '}
+              <span className={css.trajectoryYear}>2010</span>
             </li>{' '}
             <li className={css.trajectoryLi}>→</li>
             <li className={css.trajectoryLi}>
-              <span className={css.trajectoryLocation}>Dallas</span> <span className={css.trajectoryYear}>2014</span>
+              <span className={css.trajectoryLocation}>Dallas</span>{' '}
+              <span className={css.trajectoryYear}>2014</span>
             </li>{' '}
             <li className={css.trajectoryLi}>→</li>
             <li className={css.trajectoryLi}>
-              <span className={css.trajectoryLocation}>Berlin</span> <span className={css.trajectoryYear}>2017</span>
+              <span className={css.trajectoryLocation}>Berlin</span>{' '}
+              <span className={css.trajectoryYear}>2017</span>
             </li>
           </ul>
 

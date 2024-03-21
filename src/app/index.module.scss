@@ -148,16 +148,16 @@ $brown: #7e3f3f;
 }
 .bg1 {
   composes: bg;
-  background-image: url(../public/images/bluelines.png);
+  background-image: url(../../public/images/bluelines.png);
 }
 
 .bg2 {
   composes: bg;
-  background-image: url(../public//images/orangedotslight.png);
+  background-image: url(../../public//images/orangedotslight.png);
 }
 .bg3 {
   composes: bg;
-  background-image: url(../public//images/brownboxes.png);
+  background-image: url(../../public//images/brownboxes.png);
 }
 .bgScrolled {
 }

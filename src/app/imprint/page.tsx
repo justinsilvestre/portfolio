@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import css from './imprint.module.scss'
-import Layout from '../components/MainLayout'
+import Layout from '../../components/MainLayout'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 
 export default function Imprint({
