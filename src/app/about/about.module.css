@@ -14,7 +14,7 @@
 }
 
 .header {
-  composes: fontSizePhi from '../styles/shared.module.css';
+  composes: fontSizePhi from '../../styles/shared.module.css';
   text-align: center;
   margin: 7% auto;
 }
@@ -24,7 +24,7 @@
   box-sizing: border-box;
 
   margin: 1rem auto;
-  composes: lineHeightPhi from '../styles/shared.module.css';
+  composes: lineHeightPhi from '../../styles/shared.module.css';
 }
 
 .trajectory {
@@ -33,7 +33,7 @@
 }
 
 .trajectoryLi {
-  composes: headerFont from '../styles/shared.module.css';
+  composes: headerFont from '../../styles/shared.module.css';
   display: inline-block;
   position: relative;
   vertical-align: top;
@@ -48,7 +48,7 @@
 }
 .trajectoryYear {
   composes: trajectoryLiSpan;
-  composes: smallTextsize from '../styles/shared.module.css';
+  composes: smallTextsize from '../../styles/shared.module.css';
   color: #888686;
 }
 .trajectoryLi:last-child .trajectoryYear {

@@ -3,9 +3,8 @@ import css from './imprint.module.scss'
 import Layout from '../../components/MainLayout'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 
-export default function Imprint({
-  address,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Imprint() {
+  const address = process.env.GHP_IMPRESSUM_ADDRESS || ''
   return (
     <Layout>
       <section className={css.container}>
@@ -23,11 +22,4 @@ export default function Imprint({
       </section>
     </Layout>
   )
-}
-
-export const getStaticProps: GetStaticProps<{
-  address: string
-}> = async () => {
-  const address = process.env.NEXT_IMPRESSUM_ADDRESS || ''
-  return { props: { address } }
 }
