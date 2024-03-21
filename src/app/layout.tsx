@@ -8,8 +8,9 @@ import 'typeface-roboto'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'hanlib',
-  description: 'Texts for learning classical/literary Chinese',
+  title: 'Justin Silvestre - Software Developer',
+  description:
+    'Berlin-based software developer specializing in functional TypeScript.',
 }
 
 export default function RootLayout({
