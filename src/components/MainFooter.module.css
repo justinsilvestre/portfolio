@@ -27,44 +27,7 @@
   margin-right: .2em;
 }
 
-.twitterLink {
-  composes: link;
-  position: relative;
-}
-.tweet {
-  display: none;
 
-  position: absolute;
-  bottom: 150%;
-  right: -100%;
-  width: 300%;
-  min-height: 4rem;
-  padding: 1em;
-  box-sizing: border-box;
-
-  background-color: white;
-  font-size: 0.8rem;
-  line-height: 1.25;
-  composes: sansSerif from '../styles/shared.module.css';
-  color: black;
-  text-align: left;
-  border: solid 1px #C1CEE9;
-  border-radius: .5e
-}
-
-.twitterLink:hover .tweet {
-  display: block;
-  opacity: 1;
-
-  animation-duration: .25s;
-  animation-name: up-in;
-}
-
-.tweetInfo {
-  display: block;
-  text-align: right;
-  color: #7B7B7B;
-}
 
 @media screen and (max-width: 620px) {
   .container {

@@ -44,14 +44,6 @@ const Footer = () => {
         )}
         <li className={css.navLi}>
           <a
-            className={css.twitterLink}
-            href="http://twitter.com/justsilvestrein"
-          >
-            <Icon icon={twitter} /> Twitter
-          </a>
-        </li>
-        <li className={css.navLi}>
-          <a
             href="https://github.com/justinsilvestre?tab=repositories"
             className={css.link}
           >
