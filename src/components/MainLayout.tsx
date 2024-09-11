@@ -4,7 +4,7 @@ import Footer from './MainFooter'
 import Boxes from '../app/(home)/Boxes'
 
 const TITLE = 'Justin Silvestre - Software Developer'
-const DESCRIPTION = 'Berlin-based software developer specializing in functional JavaScript.'
+const DESCRIPTION = 'Berlin-based software developer specializing in functional TypeScript.'
 
 
 const Layout = ({ children }: PropsWithChildren<{}>) => {
