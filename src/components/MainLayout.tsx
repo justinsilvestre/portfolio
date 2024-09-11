@@ -1,16 +1,13 @@
-import React, { ReactNode } from 'react'
-import PropTypes from 'prop-types'
+import React, { PropsWithChildren } from 'react'
 import Head from 'next/head'
 import Footer from './MainFooter'
+import Boxes from '../app/(home)/Boxes'
 
 const TITLE = 'Justin Silvestre - Software Developer'
 const DESCRIPTION = 'Berlin-based software developer specializing in functional JavaScript.'
 
-type Props = {
-  children: ReactNode,
-}
 
-const Layout = ({ children }: Props) => {
+const Layout = ({ children }: PropsWithChildren<{}>) => {
   return (
     <>
       <Head>
@@ -20,14 +17,10 @@ const Layout = ({ children }: Props) => {
         <meta name="title" content={DESCRIPTION} />
         <meta name="description" content={TITLE} />
       </Head>
+      <Boxes className="w-full h-full absolute opacity-50 z-[0] top-0 left-0" />
       {children}
       <Footer />
     </>
   )
 }
-
-Layout.propTypes = {
-  children: PropTypes.func,
-}
-
 export default Layout

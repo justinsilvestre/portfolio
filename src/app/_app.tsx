@@ -6,5 +6,6 @@ import 'typeface-karla'
 import 'typeface-roboto'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
+  console.log('MyApp')
   return <Component {...pageProps} />
 }

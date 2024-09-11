@@ -44,7 +44,7 @@ const Footer = () => {
         )}
         <li className={css.navLi}>
           <a
-            href="https://github.com/justinsilvestre?tab=repositories"
+            href="https://github.com/justinsilvestre"
             className={css.link}
           >
             <Icon icon={github} /> Github
@@ -65,7 +65,7 @@ const Footer = () => {
           </a>
         </li>
         {strippedPathname !== 'imprint' && (
-          <li className={css.navLi} style={{ opacity: '0.3' }}>
+          <li className={css.navLi} style={{ color: '#22222255' }}>
             <Link legacyBehavior passHref href="/imprint">
               <a className={css.link}>Impressum</a>
             </Link>

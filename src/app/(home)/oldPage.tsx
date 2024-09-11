@@ -1,4 +1,4 @@
-import IndexPage from '.'
+import IndexPage from '..'
 
 export default function Page() {
   return <IndexPage />
