@@ -39,7 +39,8 @@ export default function Boxes({ className }: { className?: string }) {
     if (!threeState) return;
     const { controls } = threeState;
     const interval = setInterval(() => {
-      controls.autoRotateSpeed *= 0.8;
+      controls.autoRotateSpeed -= controls.autoRotateSpeed * 0.3
+      console.log(controls.autoRotateSpeed);
       if (controls.autoRotateSpeed <= 0.1) {
         clearInterval(interval);
         controls.autoRotateSpeed = 0;

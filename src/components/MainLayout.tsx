@@ -17,9 +17,10 @@ const Layout = ({ children }: PropsWithChildren<{}>) => {
         <meta name="title" content={DESCRIPTION} />
         <meta name="description" content={TITLE} />
       </Head>
-      <Boxes className="w-full h-full absolute opacity-50 z-[0] top-0 left-0" />
+      <Boxes className="w-full h-full fixed opacity-50 z-[0] top-0 left-0" />
+
       {children}
-      <Footer />
+      < Footer />
     </>
   )
 }
