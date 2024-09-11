@@ -74,7 +74,7 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
       - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.manager }} run build
+        run: GHP_IMPRESSUM_ADDRESS="$GHP_IMPRESSUM_ADDRESS" ${{ steps.detect-package-manager.outputs.manager }} run build
         env:
           GHP_IMPRESSUM_ADDRESS: "${{ secrets.GHP_IMPRESSUM_ADDRESS }}"
 
