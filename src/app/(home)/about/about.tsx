@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import cn from 'classnames'
 import css from './about.module.css'
 
@@ -8,6 +8,14 @@ const pimpleGif = '/images/oldgifs/pimplelqsmall.gif'
 
 export default function About() {
   const [{ flash }, setState] = useState({ flash: false })
+
+  useEffect(() => {
+    setTimeout(() => {
+      //@ts-ignore
+      if (window.stopRotatingSlowly) window.stopRotatingSlowly()
+    }, 500)
+  }, [])
+
   return (
     <section className={cn(css.container, 'my-0 mx-auto lg:pt-16')}>
       <h1 className={css.header}>About Justin</h1>
@@ -85,4 +93,5 @@ export default function About() {
       </div>
     </section>
   )
+
 }

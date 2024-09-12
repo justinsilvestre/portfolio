@@ -1,10 +1,16 @@
 'use client'
 
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 
 function IndexPage() {
+  useEffect(() => {
+    setTimeout(() => {
+      //@ts-ignore
+      if (window.startRotatingSlowly) window.startRotatingSlowly()
+    }, 500)
+  }, [])
 
   return (
     <div className='flex flex-col items-center justify-center md:h-[calc(100vh-3rem)] w-full pt-16 md:pt-0 px-8'>

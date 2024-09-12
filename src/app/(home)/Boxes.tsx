@@ -40,7 +40,6 @@ export default function Boxes({ className }: { className?: string }) {
     const { controls } = threeState;
     const interval = setInterval(() => {
       controls.autoRotateSpeed -= controls.autoRotateSpeed * 0.3
-      console.log(controls.autoRotateSpeed);
       if (controls.autoRotateSpeed <= 0.1) {
         clearInterval(interval);
         controls.autoRotateSpeed = 0;
@@ -61,10 +60,18 @@ export default function Boxes({ className }: { className?: string }) {
     }, 100);
   }
 
+  if (globalThis.window) {
+    // @ts-ignore
+    window.stopRotatingSlowly = () => stopRotatingSlowly(threeState.current);
+    // @ts-ignore
+    window.startRotatingSlowly = () => startRotatingSlowly(threeState.current);
+  }
+
   return <div className={className} onClick={toggleAnimation}>
     <canvas ref={rootElement}></canvas>
   </div>
 }
+
 
 
 type ThreeState = ReturnType<typeof init>;
