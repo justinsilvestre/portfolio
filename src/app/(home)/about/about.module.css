@@ -10,15 +10,14 @@
 
 .p,
 .header,
-.trajectory {
-  background-color: #dddddd288;
+.trajectoryLi:not(.trajectoryLiArrow) {
   border-radius: 0.5rem;
   backdrop-filter: blur(10px);
+  background-color: #eeeeee88;
 }
 
 .container {
   max-width: 500px;
-  margin: 0 auto;
   overflow: auto;
 }
 
@@ -29,11 +28,11 @@
 }
 
 .p {
-  padding: 0 1.25rem;
+  padding: 1rem;
   box-sizing: border-box;
+  border-radius: 0.5rem;
 
   margin: 1rem auto;
-  padding: 0.5rem;
   composes: lineHeightPhi from '../../../styles/shared.module.css';
 }
 
@@ -49,6 +48,10 @@
   vertical-align: top;
   padding-left: 0.25em;
   padding-right: 0.25em;
+}
+
+.trajectoryLiArrow {
+  composes: trajectoryLi;
 }
 
 .trajectoryLiSpan {
