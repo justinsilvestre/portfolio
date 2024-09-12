@@ -73,8 +73,9 @@ export default function About() {
         <a href="https://kanjisense.com"><img src="/images/kanjisense-screenshot.png" alt="" className=" shadow-lg shadow-black/65 mb-4" /></a>
         <a href="https://kanjisense.com" className="underline font-bold">Kanjisense</a> is a{' '}
         free online dictionary for learners of Japanese characters.
-        It breaks down each of the approximately 3500 <i>kanji</i> characters needed for adult-level literacy in Japanese into their graphic components,
-        {' '}explaining their forms and their origins, while also <span className="font-bold">illuminating the connections</span> between different characters.
+        It breaks down each of the approximately 3500 <i>kanji</i> characters needed for adult-level Japanese literacy into their graphic components,
+        explaining their forms and their origins.
+        Kanjisense helps the learner's memory in particular by <span className="font-bold">illuminating the connections</span> between different characters.
       </p>
       <p className={css.p}>
         <a href="https://github.com/justinsilvestre/hanlib"><img src="/images/hanlib-screenshot.png" alt="" className=" shadow-lg shadow-black/65 mb-4" /></a>
