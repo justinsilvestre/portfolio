@@ -12,9 +12,15 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {...props}
       />
     ),
-    ul: (props) => (
-      <ul className="list-disc list-inside mb-4 ml-4" {...props} />
+    ul: (props) => <ul className="list-disc mb-4 ml-4" {...props} />,
+    li: (props) => <li className="mb-2 list-item" {...props} />,
+    a: (props) => (
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-600 hover:text-blue-800 underline hover:no-underline"
+        {...props}
+      />
     ),
-    li: (props) => <li className="mb-2" {...props} />,
   }
 }
