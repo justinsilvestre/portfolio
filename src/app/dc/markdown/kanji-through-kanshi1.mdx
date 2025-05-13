@@ -1,5 +1,22 @@
-# Lorem ipsum dolor sit amet,
+import { KanjiThroughKanshiTitle, KanjiThroughKanshiGlossedPoem, KanjiThroughKanshiTsuita } from "./imports/kanji-through-kanshi";
 
-consectetur adipiscing elit. Etiam bibendum felis ex, eu vulputate lectus rutrum eget. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed rutrum ullamcorper lectus, nec scelerisque nisl pellentesque in. Curabitur in egestas velit. Etiam elit augue, tincidunt eu pulvinar vitae, finibus in nibh. Duis sodales elit vitae nulla vehicula tempus. Nam quis pretium arcu, a porttitor nisi.
+<KanjiThroughKanshiTitle />
 
-Nulla in ante id sapien ullamcorper rhoncus sed vel nulla. Sed dictum molestie libero, nec blandit nunc. Phasellus convallis laoreet risus, sed suscipit metus. Curabitur nulla risus, sagittis in egestas et, hendrerit vel dolor. Duis a lobortis dolor. Fusce sed erat feugiat nunc eleifend venenatis. Quisque eu sem quis tellus commodo luctus quis ut velit. Integer tortor lorem, commodo nec erat ut, tristique rhoncus neque. Aenean justo tortor, auctor nec fermentum a, vestibulum at erat. Proin dolor ex, molestie quis nibh at, consectetur vulputate leo. Morbi efficitur porttitor tellus, eget mattis dolor. Mauris condimentum nunc nec tempus suscipit. Sed a leo id eros pulvinar vestibulum ut at erat. Mauris eget porttitor quam.
+## Japanese, Classical Chinese, and the blurry boundary between them
+<KanjiThroughKanshiTsuita/>
+
+This year, a mobile app went viral in Japan by exploiting the sometimes blurry boundary between Japanese and Chinese. Its name is  対多 _Tsuita_, a playful riff of "Twitter", and it captivated Japanese users by allowing them to anonymously post short messages just like in Twitter, but with a twist. If you try to post a message, it will be rejected if it contains any characters that are not _kanji_, the Chinese characters used heavily in the Japanese script. The rejection message, also entirely in kanji, reads:
+
+<div className="text-center">
+偽中国語入力必須
+<br />"Pseudo-Chinese input required"
+</div>
+
+
+Chinese speakers might well understand this message, as well as many of the posts on _Tsuita_. But users are fully aware that this isn't _really_ Chinese&mdash;it's just _pseudo_-Chinese. Japanese and Chinese don't use kanji in the exact same way, so when a Chinese speaker reads any given _Tsuita_ post, chances either are they will feel that something is _off_, or they will completely miss the point. But the fact Japanese users communicate successfully with each other using this pseudo-Chinese shows the extent to which **Japanese and Chinese are still intertwined by means of the kanji**, as well as the extent to which this connection can be a source of fascination and delight.
+
+Though no genetic or typological relationship connects these two languages, the cultural ties go back to the beginnings of Japanese civilization. The first written language was Classical Chinese. Depending on your perspective, the Japanese script can be viewed as either a descendant of the Chinese script or simply an augmentation of it. Indeed, the Japanese literary tradition as a whole is largely an outgrowth of the Classical Chinese literary tradition, and for this reason, Japanese middle and high schoolers learn Classical Chinese as part of their _kokugo_ "national language" class. For a while now, I have been developing a course to **help students of Japanese learn the kanji by exploiting the fuzzy border between Japanese and Classical Chinese**, under the working title _Kanji through Kanshi_.
+
+The idea is to **use Classical Chinese texts to the special advantage of English-speaking learners of Japanese**. As it turns out, English grammar and Chinese grammar are similar in major ways. For instance, they both have relatively little inflectional morphology (compared to e.g. Japanese), and they both have largely SVO ("subject-verb-object") word order (as opposed to e.g. the SOV order of Japanese). Because of this, **short texts in Classical Chinese can be surprisingly easy to understand for untrained English speakers** with no more help than a word-by-word gloss&mdash;or at least, they're easier to understand than glossed Japanese texts of comparable length. This means that short glossed Chinese texts, such as the sort of Classical Chinese poems taught in Japanese middle schools, are an ideal way of introducing English speakers to the kanji, even when their end goal is to learn to read Japanese. By exploiting this blurry border between Japanese and Classical Chinese, it should be possible to teach kanji through Classical Chinese poems (in Japanese, _kanshi_) without giving students the impression that they're learning anything "extra". (Proof that the sound of the poems can be mostly ignored without losing all their literary merit can be found in the Japanese tradition of reading Classical Chinese, where the original Chinese pronunciation of texts is considered a non-issue, with few exceptions.)
+
+<KanjiThroughKanshiGlossedPoem />

@@ -11,11 +11,12 @@ export const metadata: Metadata = {
 export default function DcLayout({ children }: PropsWithChildren) {
   return (
     <div>
-      <header className="text-right max-w-screen-xl m-auto px-4 text-sm pt-1">
+      <header className="text-right max-w-screen-xl my-4 mx-auto px-4 text-sm pt-1 text-gray-500">
         Justin&nbsp;Silvestre - M.A. in Design and Computation, Winter&nbsp;2025
       </header>
       {children}
-      <footer>
+      <footer className="clear-left my-8">
+        <hr className="max-w-screen-xl mx-auto my-4" />
         <ul className="text-center">
           <FooterLink
             href="/dc/knowclip"
@@ -38,7 +39,7 @@ export default function DcLayout({ children }: PropsWithChildren) {
             title="Kanji through Kanshi"
           />
         </ul>
-        <p>
+        <p className="m-4 text-gray-500 text-sm text-center">
           Justin&nbsp;Silvestre - M.A. in Design and Computation,
           Winter&nbsp;2025
         </p>

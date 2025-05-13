@@ -1,5 +1,39 @@
-## Vestibulum pretium felis erat, sit amet euismod augue hendrerit sit amet.
+import {
+  KanjisenseKanjiList,
+  KanjisenseUiStructureElements,
+  KanjisenseAtomicComponentsList,
+  KanjisenseKaikoEntry,
+} from "./imports/kanjisense";
 
-Integer maximus vitae quam ut feugiat. Quisque nunc eros, mattis vel mi sit amet, suscipit consequat sem. Donec ut volutpat enim, ac condimentum ex. Maecenas pretium erat quis justo consequat eleifend. Vivamus vulputate eros sollicitudin urna condimentum ullamcorper. Mauris efficitur nisl in ipsum fermentum, tincidunt auctor purus facilisis. Aenean sed varius nunc. Ut tristique quis est ut tincidunt. Phasellus feugiat tincidunt ipsum sed fringilla. Integer et nisl ac lectus tempus egestas. Nullam non elit luctus, faucibus massa vitae, venenatis purus. Cras feugiat dolor sed luctus ullamcorper. Nunc dapibus massa lacus, sit amet accumsan odio gravida sit amet.
+## Using the _graphic structure_ of characters to orient learners on their kanji journey
 
-Fusce efficitur erat vitae lobortis accumsan. Aliquam erat volutpat. Fusce interdum tellus in lorem ullamcorper scelerisque. In tristique interdum arcu, ut semper ex tincidunt ac. Etiam ut vehicula diam. Quisque tempus tempor leo, porta varius justo. Nunc bibendum, orci id luctus facilisis, tortor est tempus dui, sit amet posuere tellus turpis a quam. Ut vulputate tincidunt ullamcorper. Donec finibus mattis finibus. Etiam dui sem, vestibulum ac leo nec, pharetra ullamcorper risus. Fusce neque sapien, scelerisque ut mauris ac, malesuada commodo turpis.
+The standard way to monitor learners' progress in acquiring the kanji involves gathering _a progressive set of character lists_, like those used in Japanese grade schools. The _number of characters_ from a given list which a student can read/write can then be used as a heuristic for their general kanji knowledge. Textbooks and other resources for Japanese learners often present kanji in a format similar to this:
+
+- 80 kanji from primary grade 1:
+  <KanjisenseKanjiList chars="一右雨円王音下火花貝学気九休玉金空月犬見五口校左三山子四糸字耳七車手十出女小上森人水正生青夕石赤千川先早草足村大男竹中虫町天田土二日入年白八百文木本名目立力林六" />
+- 160 kanji from primary grade 2:
+  {" "}
+  <KanjisenseKanjiList chars="引羽雲園遠何科夏家歌画回会海絵外角楽活間丸岩顔汽記帰弓牛魚京強教近兄形計元言原戸古午後語工公広交光考行高黄合谷国黒今才細作算止市矢姉思紙寺自時室社弱首秋週春書少場色食心新親図数西声星晴切雪船線前組走多太体台地池知茶昼長鳥朝直通弟店点電刀冬当東答頭同道読内南肉馬売買麦半番父風分聞米歩母方北毎妹万明鳴毛門夜野友用曜来里理話" />
+- 200 kanji from primary grade 3:
+  <KanjisenseKanjiList chars="悪安暗医委意育員院飲運泳駅央横屋温化荷界開階寒感漢館岸起期客究急級宮球去橋業曲局銀区苦具君係軽血決研県庫湖向幸港号根祭皿仕死使始指歯詩次事持式実写者主守取酒受州拾終習集住重宿所暑助昭消商章勝乗植申身神真深進世整昔全相送想息速族他打対待代第題炭短談着注柱丁帳調追定庭笛鉄転都度投豆島湯登等動童農波配倍箱畑発反坂板皮悲美鼻筆氷表秒病品負部服福物平返勉放味命面問役薬由油有遊予羊洋葉陽様落流旅両緑礼列練路和" />
+- ...and so on.
+
+{/** - 202 kanji from primary grade 4:  
+ 愛案以衣位茨印英栄媛塩岡億加果貨課芽賀改械害街各覚潟完官管関観願岐希季旗器機議求泣給挙漁共協鏡競極熊訓軍郡群径景芸欠結建健験固功好香候康佐差菜最埼材崎昨札刷察参産散残氏司試児治滋辞鹿失借種周祝順初松笑唱焼照城縄臣信井成省清静席積折節説浅戦選然争倉巣束側続卒孫帯隊達単置仲沖兆低底的典伝徒努灯働特徳栃奈梨熱念敗梅博阪飯飛必票標不夫付府阜富副兵別辺変便包法望牧末満未民無約勇要養浴利陸良料量輪類令冷例連老労録
+
+- 193 kanji from primary grade 5:  
+  圧囲移因永営衛易益液演応往桜可仮価河過快解格確額刊幹慣眼紀基寄規喜技義逆久旧救居許境均禁句型経潔件険検限現減故個護効厚耕航鉱構興講告混査再災妻採際在財罪殺雑酸賛士支史志枝師資飼示似識質舎謝授修述術準序招証象賞条状常情織職制性政勢精製税責績接設絶祖素総造像増則測属率損貸態団断築貯張停提程適統堂銅導得毒独任燃能破犯判版比肥非費備評貧布婦武復複仏粉編弁保墓報豊防貿暴脈務夢迷綿輸余容略留領歴
+- 191 kanji from primary grade 6:  
+  胃異遺域宇映延沿恩我灰拡革閣割株干巻看簡危机揮貴疑吸供胸郷勤筋系敬警劇激穴券絹権憲源厳己呼誤后孝皇紅降鋼刻穀骨困砂座済裁策冊蚕至私姿視詞誌磁射捨尺若樹収宗就衆従縦縮熟純処署諸除承将傷障蒸針仁垂推寸盛聖誠舌宣専泉洗染銭善奏窓創装層操蔵臓存尊退宅担探誕段暖値宙忠著庁頂腸潮賃痛敵展討党糖届難乳認納脳派拝背肺俳班晩否批秘俵腹奮並陛閉片補暮宝訪亡忘棒枚幕密盟模訳郵優預幼欲翌乱卵覧裏律臨朗論
+- 1130 kanji from middle school to high school:  
+  丈与且丘丙串丹丼乏乙乞乾亀了互亜享亭介仙仰企伎伏伐伯伴伸伺但佳併侍依侮侯侵侶促俊俗俸俺倒倣倫倹偉偏偵偶偽傍傑傘催傲債傾僅僕僚僧儀儒償充克免兼冒冗冠冥冶凄准凍凝凡凶凸凹刃刈刑到刹刺削剖剛剝剣剤剰劣励劾勃勅勘募勧勲勾匂匠匹匿升卑卓占即却卸厄厘又及双叔叙叫召吉吏吐吟含吹呂呈呉呪咲咽哀哲哺唄唆唇唐唯唾啓喉喚喝喩喪喫嗅嗣嘆嘱嘲噴嚇囚圏坊坑坪垣埋執培堀堅堆堕堤堪塀塁塊塑塔塗塚塞塡塾墜墨墳墾壁壇壊壌壮壱奇奉契奔奥奨奪奴如妃妄妊妖妙妥妨妬姓姫姻威娘娠娯婆婚婿媒嫁嫉嫌嫡嬢孔孤宛宜宰宴宵寂寛寝寡寧審寮寿封尉尋尚尻尼尽尾尿屈履屯岬岳峠峡峰崇崖崩嵐巡巧巨巾帆帝帥帽幅幣幻幽幾床庶庸廃廉廊廷弄弊弐弔弥弦弧弾彙彩彫彰影彼征徐御循微徴徹忌忍忙怒怖怠怨怪恋恐恒恣恥恨恭恵悔悟悠患悦悩悼惑惜惧惨惰愁愉愚慄慈慌慎慕慢慨慮慰慶憂憎憤憧憩憬憶憾懇懐懲懸戒戚戯戴戻房扇扉払扱扶抄把抑抗抜択披抱抵抹押抽拉拍拐拒拓拘拙拠括拭拳拶拷挑挟挨挫振挿捉捕捗捜据捻掃掌排掘掛控措掲描揚換握援揺搬搭携搾摂摘摩摯撃撤撮撲擁擦擬攻敏敢敷斉斎斑斗斜斤斥斬施旋既旦旨旬旺昆昇昧是普晶暁暇暦暫曇曖更曹曽替朕朱朴朽杉杯析枕枠枢枯架柄某柔柳柵柿栓核栽桁桃桑桟梗棄棋棚棟棺椅椎楷楼概槽欄欧欺款歓歳殉殊殖殴殻殿毀氾汁汎汗汚江汰沃沈沙没沢沸沼況泊泌泡泥泰洞津洪浄浜浦浪浮浸涙涯涼淑淡淫添渇渉渋渓渡渦湧湾湿溝溶溺滅滑滝滞滴漂漆漏漠漫漬漸潜潤潰澄濁濃濫濯瀬炉炊炎為烈焦煎煙煩煮燥爆爪爵爽牙牲犠狂狙狩狭猛猟猫献猶猿獄獣獲玄玩珍珠琴瑠璃璧環璽瓦瓶甘甚甲畏畔畜畝畳畿疎疫疲疾症痕痘痢痩痴瘍療癒癖皆盆盗監盤盲盾眉眠眺睡督睦瞬瞭瞳矛矯砕砲硝硫硬碁碑磨礁礎祈祉祥禅禍秀租秩称稚稲稼稽稿穂穏穫突窃窒窟窮窯竜端符筒箇箋箸範篤簿籍籠粋粒粗粘粛粧糧糾紋紛紡索紫累紳紹紺絞絡継維綱網綻緊緒締緩緯緻縁縛縫繁繊繕繭繰缶罰罵罷羅羞羨翁翻翼耐耗聴肌肖肘肝股肢肩肪肯胆胎胞胴脂脅脇脊脚脱腎腐腕腫腰腺膚膜膝膨膳臆臭致臼舗舞舟般舶舷艇艦艶芋芝芯芳苗苛茂茎荒荘菊菌菓華萎葛葬蓄蓋蔑蔽薄薦薪薫藍藤藩藻虎虐虚虜虞虹蚊蛇蛍蛮蜂蜜融衝衡衰衷袋袖被裂裕裸裾褐褒襟襲覆覇触訂訃託訟訴診詐詔詠詣詮詰該詳誇誉誓誘誰請諦諧諭諮諾謀謁謄謎謙謡謹譜譲豚豪貌貞貢販貪貫貼賂賄賊賓賜賠賢賦賭購贈赦赴超越趣距跡跳践踊踏踪蹴躍軌軒軟軸較載輝輩轄辛辣辱込迅迎迫迭逃透逐逓途逝逮逸遂遅遇遍違遜遡遣遭遮遵遷避還那邦邪邸郊郎郭酌酎酔酢酪酬酵酷醒醜醸采釈釜釣鈍鈴鉛鉢銃銘鋭鋳錠錦錬錮錯鍋鍛鍵鎌鎖鎮鐘鑑閑閥閲闇闘阻附陣陥陪陰陳陵陶隅隆随隔隙隠隣隷隻雄雅雇雌離雰零雷需震霊霜霧露靴韓韻響頃項須頑頒頓頰頻頼顎顕顧飢飽飾餅餌餓駄駆駐駒騎騒騰驚骸髄髪鬱鬼魂魅魔鮮鯨鶏鶴麓麗麺麻黙鼓齢𠮟 */}
+
+As is clear from one look at the lists, the characters tend to get progressively more complex in structure as the levels progress. That progression in complexity is a result of the **_compound graphical structure_ of the vast majority of kanji**, especially those less frequently used kanji that are learned at higher levels of Japanese study. However, Japanese course materials generally don't discuss this aspect of character structure explicitly, except maybe in passing. Instead, they teach kanji one by one, as arbitrary shapes to be learned one after the other. This method of presenting characters on an individual basis makes it easy for authors to fit them into course materials, but for learners, it conceals **major qualitative differences in character acquisition at different skill levels**.
+
+<KanjisenseAtomicComponentsList />
+
+The road to kanji literacy is not one long, monotonous course of learning one arbitrary shape after another. The compound graphical structure of most kanji makes the experience of learning kanji much more like a journey over a hill. First, one goes uphill with great effort as one learns **the basic shapes that make up the kanji**. Second, one goes downhill, with much less effort, as one has only to learn **how those shapes are combined**. Kanjisense allows learners to easily get a sense of where they are on this journey by presenting the kanji and their graphical components in the context of various structural groups.
+
+The most important of these groups are the [270 "atomic components"](https://kanjisense.com/browse/atomic-components) which form the basic building blocks of all 3500 kanji needed for adult-level literacy in Japanese. While the basic idea of graphically analyzing the kanji has been used in kanji courses before, Kanjisense distinguishes itself in this particular method of graphic analysis, as well as in the way it introduces the kanji and their components in a **non-linear presentation**. Since Kanjisense functions as a dictionary app, learners are free to explore the characters in any order they wish.
+
+This means that **learners of all levels** can look up kanji as they encounter them in their studies and instantly find its graphic relationships with other characters. At the beginner level, Kanjisense shows learners how the first characters they encounter are powerful building-blocks they will see used in more complex characters later on. As for more advanced learners, Kanjisense shows them exactly how their knowledge from their earlier kanji studies can help make learning new compound characters much easier. These insights can serve as a motivating force for kanji learners from the start of their journey until the very final stretches.

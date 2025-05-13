@@ -4,6 +4,7 @@ import { externalLink as externalLinkIcon } from 'react-icons-kit/fa/externalLin
 import { github as githubIcon } from 'react-icons-kit/icomoon/github'
 import Icon from 'react-icons-kit'
 
+import hanlibPopupCaptureGif from '../images/hanlib-popup-capture.gif'
 import { CaptionedFigure } from '../../components/CaptionedFigure'
 import { PropsWithChildren } from 'react'
 import { ProjectTitle } from '../../components/ProjectTitle'
@@ -12,15 +13,11 @@ export { HanlibKaeritenToKakikudashibun } from './HanlibKaeritenToKakikudashibun
 
 export const HanlibTitle = () => (
   <ProjectTitle
-    title={
-      <>
-        <span className=" text-green-600">Hanlib</span>
-      </>
-    }
+    title={<div className="text-8xl mb-4  text-green-600">Hanlib</div>}
     year="2019–present"
     links={[
       {
-        href: 'https://github.com/knowclip/hanlib',
+        href: 'https://github.com/justinsilvestre/hanlib',
         text: 'Introduction and source code on Github',
         icon: <Icon icon={githubIcon} />,
       },
@@ -33,9 +30,43 @@ export const HanlibTitle = () => (
   />
 )
 
+export const HanlibQuote = () => (
+  <blockquote className="md:float-left mx-auto md:mr-4 max-w-[400px] text-xl italic md:mb-4 border-l-4 pl-4  mt-4 mb-8 text-blue">
+    <p className="mb-4">
+      “But human speech is not just a blowing of air. Speech has something of
+      which it speaks, something it refers to.”
+    </p>
+    <p className="mb-4">
+      “Yes, but what it refers to is peculiarly unfixed. So is there really
+      anything it speaks of? Or has nothing ever been spoken of? You take it to
+      be different from the chirping of baby birds. Is there really any
+      difference? Or is there no difference? Is there any dispute going on
+      there? Or is there no dispute? Is anything demonstrated by it? Or is
+      nothing demonstrated by it?”
+    </p>
+    <p>-Zhuangzi, translated by Brook Ziporyn</p>
+  </blockquote>
+)
+
+export const HanlibUiBig = () => (
+  <CaptionedFigure
+    className="float-left w-[700px] mr-4 mb-4"
+    href="https://hanlib.com"
+    caption="In addition to instant dictionary lookups, the dynamically generated interactive glosses in Hanlib allow easy viewing of correspondences between the Chinese text and an English translation. By seeing the changes in word order expressed through highlighting of words, differences between Chinese and English syntax can be grasped intuitively."
+  >
+    <ExportedImage
+      className="mb-4 shadow-xl"
+      src={hanlibPopupCaptureGif}
+      alt="A screenshot of the Hanlib user interface"
+      width={800}
+      height={700}
+    />
+  </CaptionedFigure>
+)
+
 export const HanlibKaeriten = () => (
   <CaptionedFigure
-    className="w-[300px] float-left mr-4"
+    className="w-[300px] md:float-left m-auto md:mr-4"
     caption={
       <>
         <i>Kaeriten</i> annotations (highlighted in{' '}
@@ -64,7 +95,7 @@ const 矛 = <span className="text-purple-500">矛</span>
 const 者 = <span className="text-pink-500">者</span>
 export const HanlibKakikudashibun = () => (
   <CaptionedFigure
-    className="w-[300px] float-left clear-left mr-4"
+    className="w-[300px] md:float-left clear-left m-auto md:mr-4"
     caption={
       <>
         Once the Chinese characters are rearranged to match Japanese word order,
@@ -145,7 +176,7 @@ export const HanlibGlossingLanguage = () => (
       </>
     }
     captionAlign="left"
-    className="w-[500px] float-right ml-4"
+    className="w-[500px] m-auto md:float-right md:ml-4"
   >
     <div className="mb-2">
       <ruby className="text-4xl">
@@ -230,23 +261,23 @@ export const HanlibGlossingLanguage = () => (
 
 export const HanlibGlossEditingUi = () => (
   <CaptionedFigure
-    className="w-[500px] float-left mr-4"
+    className="w-[500px] md:float-left m-auto md:mr-4"
     captionAlign="left"
     href="https://justinsilvestre.github.io/hanlib/texts/brandt-ch01-1/source"
     caption={
       <>
         Using this gloss-editing UI, I've been glossing the texts from{' '}
         <i>Introduction to Literary Chinese</i> by J. Brandt. After this is
-        done, the Hanlib will have a dictionary complete rich set of example
-        sentences to help readers engage with more advanced texts.
+        done, the Hanlib will have a dictionary complete with a rich set of
+        example sentences to help readers engage with more advanced texts.
       </>
     }
   >
     <ExportedImage
       src={hanlibGlossEditingUiPng}
       alt="A screenshot of the Hanlib gloss editing UI"
-      width={500}
-      height={500}
+      width={700}
+      height={700}
       className="shadow-xl mb-4"
     />
   </CaptionedFigure>
