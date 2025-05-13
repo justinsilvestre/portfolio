@@ -21,7 +21,7 @@ import { ProjectTitle } from '../../components/ProjectTitle'
 
 export const KanjisenseTitle = () => (
   <ProjectTitle
-    className="clear-left"
+    className="clear-left md:clear-none"
     title={<div className="text-5xl text-orange-600">Kanjisense</div>}
     year="2023–present"
     links={[
