@@ -211,7 +211,7 @@ export const KanjisenseAtomicComponentsList = () => (
   <CaptionedFigure
     className="float-left mr-4 md:w-[500px] md:max-w-[40%]"
     href="https://kanjisense.com/browse/atomic-components"
-    caption='The 270 "atomic components" are the building blocks for thousands of kanji. Kanjisense have the option to browse through lists like this one, but they are free to look up any character they wish, and to jump from character to character, too.'
+    caption='The 270 "atomic components" are the building blocks for thousands of kanji. Kanjisense users have the option to browse through lists like this one, but they are free to look up any character they wish, and to jump from character to character, too.'
   >
     <ExportedImage
       src={kanjisenseAtomicComponentsJpeg}
