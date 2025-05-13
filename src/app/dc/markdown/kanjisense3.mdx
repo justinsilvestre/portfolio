@@ -1,7 +1,18 @@
-## Duis molestie ante gravida sollicitudin pellentesque.
+import {
+  KanjisenseUiStructureElements,
+  KanjisenseBoldnessDemo,
+} from "./imports/kanjisense";
 
-Proin ullamcorper vestibulum ipsum aliquam gravida. Praesent in imperdiet magna, non tristique urna. Proin hendrerit elit id mattis viverra. Maecenas scelerisque ultrices semper. Phasellus id mauris commodo, rutrum tellus quis, venenatis ligula. Fusce ut ante id mi porttitor volutpat.
 
-Ut non augue sed sapien pellentesque commodo vel nec libero. Proin porttitor mauris vitae molestie vulputate. Suspendisse potenti. Sed et lacus mattis, ultricies dolor quis, vestibulum ligula. Curabitur id dapibus odio. Fusce facilisis accumsan nibh eget rhoncus. Integer vel aliquet odio, ut tempus urna. In congue, risus vel bibendum elementum, augue nulla ultrices tellus, eleifend fringilla magna nisl et mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
-Fusce gravida laoreet diam. Suspendisse vehicula feugiat suscipit. Phasellus ut aliquam purus. Curabitur ac hendrerit massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus ut convallis mi. Nullam viverra placerat turpis ac rhoncus. Sed eget laoreet libero. Integer pretium malesuada porttitor. Donec risus justo, tempor at egestas vitae, auctor id ex. Vivamus nec mauris nec tellus sodales euismod. Nulla semper metus dui, non euismod ante aliquet sit amet. Sed sed dictum neque. Duis laoreet maximus nibh, et rhoncus odio placerat sit amet.
+## A design language for illuminating relationships between characters
+
+<KanjisenseUiStructureElements />
+
+Wherever a character appears in the Kanjisense user interface, **visual cues** help the user instantly discern certain important aspects of its relationships with other characters. One major element of this system consists of **enclosing shapes** around characters in the UI. Kanji components, i.e. graphic building blocks which are used to form multiple different kanji, are shown in a **circle**, and standalone characters are shown in a **square**. These shapes were chosen so that they can combine in an intuitive way to highlight those graphic elements which double as components _and_ standalone characters.
+
+Another important element of the design language is the **color** associated with characters and their components, which hints at the **frequency of use** of a given character or component. For example, characters in a **blue hue** constitute **the most commonly used** character set, derived from the Japanese government's elementary-school-level kanji lists. Characters in a **red hue** are **the rarest** of the characters still in general use (belonging to no important government lists except the "Name-Use Kanji" list which sanctions the use of kanji in names). These lists have their shortcomings, some of which I touched on above. Another shortcoming is that they don't always reflect a character's actual usefulness in real-world contexts. For example, the character **禾** (rice plant) is not included in the elementary school list, but it is a very common component of other characters. On the other hand, the character **蚕** (silkworm) is included in the elementary school list, but it is extremely rare in actual use. To mitigate some of these shortcomings, I used the **brightness** of those colors as an additional cue. This gives a rough idea of the character's frequency of use _as a standalone character or as a component_.
+
+<KanjisenseBoldnessDemo />
+
+These and other visual cues give learners an instant sense of which characters are of greatest interest to them at their particular stage of learning. Without the guidance of a teacher, or an algorithmically generated content feed, it's possible for anyone learning Japanese to use the Kanjisense app in a way personalized to their own needs by simply following the shapes and colors that suit them best at their current level.
