@@ -1,5 +1,9 @@
 module.exports = {
-  content: ['./src/components/**/*.tsx', './src/app/**/*.tsx'],
+  content: [
+    './src/components/**/*.tsx',
+    './src/app/**/*.tsx',
+    './mdx-components.tsx',
+  ],
   theme: {
     extend: {
       colors: {
