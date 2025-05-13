@@ -15,7 +15,6 @@ export const metadata: Metadata = {
 export default function HanlibPage() {
   return (
     <main className="p-4 max-w-screen-xl m-auto">
-      <h1 className="text-2xl text-green-600">Hanlib</h1>
       <Hanlib1 />
       <CaptionedFigure
         className="w-[700px] mr-4 mb-4"

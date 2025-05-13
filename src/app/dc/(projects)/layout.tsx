@@ -2,6 +2,7 @@ import 'tailwindcss/tailwind.css'
 
 import { PropsWithChildren } from 'react'
 import type { Metadata } from 'next'
+import { FooterLink } from '../components/FooterLink'
 
 export const metadata: Metadata = {
   title: 'Justin Silvestre | M.A. in Design and Computation, Winter 2025',
@@ -14,7 +15,34 @@ export default function DcLayout({ children }: PropsWithChildren) {
         Justin&nbsp;Silvestre - M.A. in Design and Computation, Winter&nbsp;2025
       </header>
       {children}
-      <footer></footer>
+      <footer>
+        <ul className="text-center">
+          <FooterLink
+            href="/dc/knowclip"
+            className="text-red-600 [&.active]:text-white [&.active]:bg-red-600"
+            title="Knowclip"
+          />
+          <FooterLink
+            href="/dc/hanlib"
+            className="text-green-600 [&.active]:text-white [&.active]:bg-green-600"
+            title="Hanlib"
+          />
+          <FooterLink
+            href="/dc/kanjisense"
+            className="text-orange-600 [&.active]:text-white [&.active]:bg-orange-600"
+            title="Kanjisense"
+          />
+          <FooterLink
+            href="/dc/kanji-through-kanshi"
+            className="text-blue-600 [&.active]:text-white [&.active]:bg-blue-600"
+            title="Kanji through Kanshi"
+          />
+        </ul>
+        <p>
+          Justin&nbsp;Silvestre - M.A. in Design and Computation,
+          Winter&nbsp;2025
+        </p>
+      </footer>
     </div>
   )
 }
