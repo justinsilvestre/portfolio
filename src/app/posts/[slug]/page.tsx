@@ -1,4 +1,4 @@
-'use server';
+// 'use server';
 import Container from '../../../components/container'
 import PostBody from '../../../components/post-body'
 import Header from '../../../components/header'
@@ -9,7 +9,7 @@ import markdownToHtml from '../../../../lib/markdownToHtml'
 import PostType from '../../../types/post'
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import Alert from '../../../components/alert';
+import Alert from '../../../components/alert'
 
 type Props = {
   post: PostType
@@ -18,13 +18,13 @@ type Props = {
 }
 
 export default async function Post({ params }: Params) {
-  const post = getPostBySlug(params.slug);
+  const post = getPostBySlug(params.slug)
 
   if (!post) {
-    return notFound();
+    return notFound()
   }
 
-  const content = await markdownToHtml(post.content || "");
+  const content = await markdownToHtml(post.content || '')
 
   return (
     <main>
@@ -42,24 +42,23 @@ export default async function Post({ params }: Params) {
         </article>
       </Container>
     </main>
-  );
+  )
 }
-
 
 type Params = {
   params: {
-    slug: string;
-  };
-};
+    slug: string
+  }
+}
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
-  const post = getPostBySlug(params.slug);
+  const post = getPostBySlug(params.slug)
 
   if (!post) {
-    return notFound();
+    return notFound()
   }
 
-  const title = `${post.title} | Next.js Blog Example with ${CMS_NAME}`;
+  const title = `${post.title} | Next.js Blog Example with ${CMS_NAME}`
 
   return {
     title,
@@ -67,13 +66,13 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       title,
       images: [post.ogImage.url],
     },
-  };
+  }
 }
 
 export async function generateStaticParams() {
-  const posts = getAllPosts();
+  const posts = getAllPosts()
 
   return posts.map((post) => ({
     slug: post.slug,
-  }));
+  }))
 }
