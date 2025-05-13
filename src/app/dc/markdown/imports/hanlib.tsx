@@ -31,7 +31,7 @@ export const HanlibTitle = () => (
 )
 
 export const HanlibQuote = () => (
-  <blockquote className="float-left mr-4 max-w-[400px] text-xl italic mb-4 border-l-4 pl-4   my-4 text-blue">
+  <blockquote className="md:float-left mx-auto md:mr-4 max-w-[400px] text-xl italic md:mb-4 border-l-4 pl-4  mt-4 mb-8 text-blue">
     <p className="mb-4">
       “But human speech is not just a blowing of air. Speech has something of
       which it speaks, something it refers to.”
@@ -66,7 +66,7 @@ export const HanlibUiBig = () => (
 
 export const HanlibKaeriten = () => (
   <CaptionedFigure
-    className="w-[300px] float-left mr-4"
+    className="w-[300px] md:float-left m-auto md:mr-4"
     caption={
       <>
         <i>Kaeriten</i> annotations (highlighted in{' '}
@@ -95,7 +95,7 @@ const 矛 = <span className="text-purple-500">矛</span>
 const 者 = <span className="text-pink-500">者</span>
 export const HanlibKakikudashibun = () => (
   <CaptionedFigure
-    className="w-[300px] float-left clear-left mr-4"
+    className="w-[300px] md:float-left clear-left m-auto md:mr-4"
     caption={
       <>
         Once the Chinese characters are rearranged to match Japanese word order,
@@ -176,7 +176,7 @@ export const HanlibGlossingLanguage = () => (
       </>
     }
     captionAlign="left"
-    className="w-[500px] float-right ml-4"
+    className="w-[500px] m-auto md:float-right md:ml-4"
   >
     <div className="mb-2">
       <ruby className="text-4xl">
@@ -261,7 +261,7 @@ export const HanlibGlossingLanguage = () => (
 
 export const HanlibGlossEditingUi = () => (
   <CaptionedFigure
-    className="w-[500px] float-left mr-4"
+    className="w-[500px] md:float-left m-auto md:mr-4"
     captionAlign="left"
     href="https://justinsilvestre.github.io/hanlib/texts/brandt-ch01-1/source"
     caption={
@@ -276,8 +276,8 @@ export const HanlibGlossEditingUi = () => (
     <ExportedImage
       src={hanlibGlossEditingUiPng}
       alt="A screenshot of the Hanlib gloss editing UI"
-      width={500}
-      height={500}
+      width={700}
+      height={700}
       className="shadow-xl mb-4"
     />
   </CaptionedFigure>

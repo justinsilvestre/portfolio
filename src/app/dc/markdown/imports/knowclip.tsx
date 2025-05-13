@@ -66,9 +66,9 @@ export const YoutubeDlTakedownLink = () => (
 )
 
 export const KnowclipUiCapture = () => (
-  <>
+  <div className="flex flex-row justify-around flex-wrap md:block">
     <CaptionedFigure
-      className="w-[300px] float-left mr-4"
+      className="w-[300px] md:float-left mx-4"
       caption={
         <>
           While watching a subtitled video in Knowclip, users can instantly look
@@ -86,7 +86,7 @@ export const KnowclipUiCapture = () => (
       />
     </CaptionedFigure>
     <CaptionedFigure
-      className="w-[200px] float-left mr-4"
+      className="w-[200px] md:float-left mx-4"
       caption={
         <>
           After exporting the flashcard deck, users can use it on desktop, web,
@@ -104,12 +104,12 @@ export const KnowclipUiCapture = () => (
         className="shadow-xl mb-4"
       />
     </CaptionedFigure>
-  </>
+  </div>
 )
 
 export const KnowclipDependenciesScreenshot = () => (
   <CaptionedFigure
-    className="w-[600px] float-right ml-4"
+    className="float-right ml-4 w-full md:max-w-[30%] lg:max-w-[40%]"
     caption={
       <>
         Pictured is a list of all the third-party libraries that Knowclip
@@ -124,9 +124,9 @@ export const KnowclipDependenciesScreenshot = () => (
     <ExportedImage
       src={knowclipDependenciesScreenshotJpg}
       alt="The dependency graph of Knowclip, showing the various libraries and packages it depends on."
-      width={600}
-      height={600}
-      className="shadow-xl mb-4"
+      width={700}
+      height={700}
+      className="shadow-xl mb-4 object-cover"
     />
   </CaptionedFigure>
 )

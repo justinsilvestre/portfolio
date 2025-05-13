@@ -79,7 +79,7 @@ export const HanlibKaeritenToKakikudashibun = () => {
   }, [])
   return (
     <CaptionedFigure
-      className="w-[300px] float-left clear-left mr-4"
+      className="w-[300px] md:float-left clear-left m-auto md:mr-4"
       caption={
         <>
           The <i>kaeriten</i> can be used as instructions for rearranging the

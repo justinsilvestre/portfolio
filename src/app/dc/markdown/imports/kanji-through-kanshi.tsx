@@ -66,7 +66,7 @@ export const KanjiThroughKanshiGlossedPoem = () => (
 
 export const KanjiThroughKanshiTsuita = () => (
   <CaptionedFigure
-    className="w-[300px] float-left mr-4"
+    className="w-[300px] md:float-left m-auto md:mr-4"
     caption={
       <>
         Written only in Chinese characters, "pseudo-Chinese" is neither Chinese

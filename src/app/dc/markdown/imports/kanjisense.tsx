@@ -43,7 +43,7 @@ export const KanjisenseKanjiList = ({ chars }: { chars: string }) => {
 
 export const KanjisenseRedBg = () => (
   <CaptionedFigure
-    className="w-[300px] float-right ml-4 lg:float:right"
+    className="w-[300px] m-auto md:float-right md:ml-4 "
     href="https://kanjisense.com/browse/characters"
     caption="Users are free to explore the relationships between the 3500 most important kanji and their graphic components."
   >

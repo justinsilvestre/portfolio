@@ -43,7 +43,7 @@ export function CaptionedFigure({
   )
   return href ? (
     <ExternalLink
-      className={classNames(className, 'mb-2 max-w-full')}
+      className={classNames(className, 'block mb-2 max-w-full')}
       href={href}
     >
       {figure}
