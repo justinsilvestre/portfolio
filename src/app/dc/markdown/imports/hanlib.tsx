@@ -51,7 +51,7 @@ export const HanlibQuote = () => (
 export const HanlibUiBig = () => (
   <CaptionedFigure
     className="float-left w-[700px] mr-4 mb-4"
-    href="https://hanlib.com"
+    href="https://justinsilvestre.github.io/hanlib/texts/brandt-ch01-3"
     caption="In addition to instant dictionary lookups, the dynamically generated interactive glosses in Hanlib allow easy viewing of correspondences between the Chinese text and an English translation. By seeing the changes in word order expressed through highlighting of words, differences between Chinese and English syntax can be grasped intuitively."
   >
     <ExportedImage

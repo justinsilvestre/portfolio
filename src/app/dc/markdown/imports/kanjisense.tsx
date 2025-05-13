@@ -5,6 +5,7 @@ import { github as githubIcon } from 'react-icons-kit/icomoon/github'
 import { externalLink as externalLinkIcon } from 'react-icons-kit/fa/externalLink'
 import kanjisenseRedBgJpeg from '../images/kanjisense-red-bg.jpeg'
 import kanjisenseKusaBadgeJpeg from '../images/kanjisense-kusa-badge.jpeg'
+import kanjisenseEntryScrolledPng from '@/app/dc/markdown/images/kanjisense-entry-scrolled.png'
 import kanjisenseKusakanmuriBadgeJpeg from '../images/kanjisense-kusakanmuri-badge.jpeg'
 import kanjisenseHayaiBadgeJpeg from '../images/kanjisense-hayai-badge.jpeg'
 import kanjisenseYasumuEntryTopCompactPng from '../images/kanjisense-yasumu-entry-top-compact.png'
@@ -20,6 +21,7 @@ import { ProjectTitle } from '../../components/ProjectTitle'
 
 export const KanjisenseTitle = () => (
   <ProjectTitle
+    className="clear-left"
     title={<div className="text-5xl text-orange-600">Kanjisense</div>}
     year="2023–present"
     links={[
@@ -35,6 +37,22 @@ export const KanjisenseTitle = () => (
       },
     ]}
   />
+)
+
+export const KanjisenseScreenshot = () => (
+  <CaptionedFigure
+    className="float-left mr-6 w-full md:max-w-[40%] lg:max-w-[50%]"
+    href="https://kanjisense.com/dict/青"
+    caption="A Kanjisense dictionary entry, highlighting the character's graphical composition and its structural relationships with other characters."
+  >
+    <ExportedImage
+      src={kanjisenseEntryScrolledPng}
+      alt="A screenshot of a dictionary entry in the Kanjisense app"
+      width={650}
+      height={650}
+      className="shadow-xl mb-4 object-cover"
+    />
+  </CaptionedFigure>
 )
 
 export const KanjisenseKanjiList = ({ chars }: { chars: string }) => {
