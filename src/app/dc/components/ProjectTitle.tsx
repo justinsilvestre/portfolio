@@ -1,17 +1,25 @@
 import { ReactNode } from 'react'
 import { ExternalLink } from './ExternalLink'
+import classNames from 'classnames'
 
 export const ProjectTitle = ({
   title,
   year,
   links,
+  className,
 }: {
   title: ReactNode
   year: string
   links: { href: string; text: string; icon: ReactNode }[]
+  className?: string
 }) => {
   return (
-    <div className="flex flex-row flex-wrap gap-4 space-between mb-4">
+    <div
+      className={classNames(
+        'flex flex-row flex-wrap gap-4 space-between mb-4',
+        className
+      )}
+    >
       <div className="">
         <h1 className="">
           {title}
