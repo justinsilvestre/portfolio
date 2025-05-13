@@ -16,29 +16,25 @@ import kanjisenseKaikoEntryTopCompactPng from '../images/kanjisense-kaiko-entry-
 
 import { CaptionedFigure } from '../../components/CaptionedFigure'
 import { ExternalLink } from '../../components/ExternalLink'
+import { ProjectTitle } from '../../components/ProjectTitle'
 
 export const KanjisenseTitle = () => (
-  <div className=" flex-row flex-wrap gap-4 justify-center mb-4">
-    <div className="">
-      <h1 className="text-5xl">
-        <span className=" text-orange-600">Kanjisense</span>
-        <br />
-        <span className="text-3xl font-light">2023&ndash;present</span>
-      </h1>
-      <ul>
-        <li className="inline-block m-1">
-          <ExternalLink href="https://kanjisense.com">
-            <Icon icon={externalLinkIcon} /> Kanjisense website
-          </ExternalLink>
-        </li>
-        <li className="inline-block m-1">
-          <ExternalLink href="https://github.com/justinsilvestre/kanjisense">
-            <Icon icon={githubIcon} /> Source code on Github
-          </ExternalLink>
-        </li>
-      </ul>
-    </div>
-  </div>
+  <ProjectTitle
+    title={<div className="text-5xl text-orange-600">Kanjisense</div>}
+    year="2023–present"
+    links={[
+      {
+        href: 'https://kanjisense.com',
+        text: 'Kanjisense website',
+        icon: <Icon icon={externalLinkIcon} />,
+      },
+      {
+        href: 'https://github.com/justinsilvestre/kanjisense',
+        text: 'Source code on Github',
+        icon: <Icon icon={githubIcon} />,
+      },
+    ]}
+  />
 )
 
 export const KanjisenseKanjiList = ({ chars }: { chars: string }) => {
@@ -126,7 +122,7 @@ export const KanjisenseUiStructureElements = () => (
   </div>
 )
 
-export const KanjisenseJinmeiyoLists = () => (
+const KanjisenseJinmeiyoLists = () => (
   <div className="">
     <CaptionedFigure
       className="w-[400px]"
@@ -179,8 +175,7 @@ export const KanjisenseJinmeiyoLists = () => (
   </div>
 )
 
-// 蚕
-export const KanjisenseKaikoEntry = () => (
+const KanjisenseKaikoEntry = () => (
   <CaptionedFigure
     className="w-[400px]"
     captionAlign="left"
@@ -203,6 +198,13 @@ export const KanjisenseKaikoEntry = () => (
       className="shadow-xl mb-4"
     />
   </CaptionedFigure>
+)
+
+export const KanjisenseBoldnessDemo = () => (
+  <div className="flex flex-wrap gap-2 justify-evenly">
+    <KanjisenseJinmeiyoLists />
+    <KanjisenseKaikoEntry />
+  </div>
 )
 
 export const KanjisenseAtomicComponentsList = () => (

@@ -14,7 +14,7 @@ export const KnowclipTitle = () => (
   <ProjectTitle
     title={
       <>
-        <span className=" text-red-600">Knowclip</span>
+        <span className="text-7xl text-red-600">Knowclip</span>
       </>
     }
     year="2019–present"
@@ -42,8 +42,8 @@ export const KnowclipHomepageScreenshot = () => (
     <ExportedImage
       src={knowclipHomepageScreenshotPng}
       alt="A screenshot of the Knowclip homepage"
-      width={600}
-      height={600}
+      width={650}
+      height={650}
       className="shadow-xl mb-4 object-cover"
     />
   </CaptionedFigure>

@@ -15,12 +15,12 @@ export const ProjectTitle = ({
       <div className="">
         <h1 className="">
           {title}
-          <div className="text-3xl font-light">{year}</div>
+          <div className="text-3xl font-light mt-2">{year}</div>
         </h1>
       </div>
-      <ul className="text-right flex-grow">
+      <ul className="text-right flex-grow self-end">
         {links.map((link) => (
-          <li key={link.text} className=" m-3">
+          <li key={link.text} className="m-2">
             <ExternalLink href={link.href}>
               {link.text}
               {link.icon ? <> {link.icon}</> : null}
