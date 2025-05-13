@@ -248,7 +248,8 @@ export const HanlibGlossingLanguage = () => (
 
     <div className="mb-2">
       <pre className="whitespace-pre-wrap bg-slate-100 border-[1px] border-slate-600">
-        [Among] 2[of] Chu 1[the] people be_there<N>[:there_was]</N> 2sell
+        [Among] 2[of] Chu 1[the] person[:people] be_there<N>[:there_was]</N>{' '}
+        2sell
         <N>[:sold]</N> 3shield<N>[s]</N> 4and 5spear<N>[s]</N> 1one_who.
       </pre>
       <div className="text-lg font-serif">
