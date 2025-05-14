@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 function DcPage() {
   return (
     <Fragment>
-      <main className="p-4 grid lg:grid-rows-[minmax(1px,_auto)_1fr] lg:grid-cols-[450px_1fr] max-w-screen-xl m-auto gap-8">
+      <main className="p-4 grid lg:grid-rows-[minmax(1px,_auto)_1fr] lg:grid-cols-[450px_1fr] max-w-screen-lg m-auto gap-8">
         <div className="order-1 lg:col-[1] lg:row-[1] lg:pr-4">
           <h1 className="lg:text-left text-3xl mb-4">
             I'm Justin. Nice to meet&nbsp;you.
