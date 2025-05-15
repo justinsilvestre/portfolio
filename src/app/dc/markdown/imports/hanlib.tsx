@@ -14,7 +14,7 @@ export { HanlibKaeritenToKakikudashibun } from './HanlibKaeritenToKakikudashibun
 export const HanlibTitle = () => (
   <ProjectTitle
     title={<div className="text-8xl mb-4  text-green-600">Hanlib</div>}
-    year="2019–present"
+    year="2024–present"
     links={[
       {
         href: 'https://github.com/justinsilvestre/hanlib',
