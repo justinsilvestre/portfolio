@@ -21,7 +21,7 @@
     "classnames": "^2.5.1",
     "date-fns": "2.10.0",
     "gray-matter": "^4.0.2",
-    "next": "^14.2.9",
+    "next": "^14.2.30",
     "next-image-export-optimizer": "^1.19.0",
     "postcss-preset-env": "^10.0.3",
     "react": "^18.2.0",
